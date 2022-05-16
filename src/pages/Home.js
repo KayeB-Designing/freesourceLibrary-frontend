@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 function Home(props) {
   // create state to hold projects
@@ -34,4 +35,4 @@ function Home(props) {
   return home ? loaded() : <h1>Loading...</h1>;
 }
 
-export default Projects;
+export default Home;

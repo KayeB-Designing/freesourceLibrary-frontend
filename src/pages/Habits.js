@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 function Habits(props) {
   // create state to hold projects
-  const [goals, setHabits] = useState(null);
+  const [habits, setHabits] = useState(null);
 
   //create function to make api call
   const getHabitsData = async () => {
