@@ -9,33 +9,28 @@ import Goals from "./pages/Goals";
 import Habits from "./pages/Habits";
 import TimeManagement from "./pages/TimeManagement";
 
-const URL = "https://freesource-library.herokuapp.com/home";
+
 
 function App() {
+
+  const URL = "https://freesource-library.herokuapp.com";
+
   return (
     <div className="App">
-      {/* <Header />
+      <Header />
+      {/* <Home /> */}
       <Routes>
-        <Route exact path="/home">
-          <Home />
-        </Route>
-        <Route path="/about">
-          <About URL={URL} />
-        </Route>
-        <Route path="/goals">
-          <Goals URL={URL} />
-        </Route>
-        <Route path="/habits">
-          <Habits URL={URL} />
-        </Route>
-        <Route path="/timeManagement">
-          <TimeManagement URL={URL} />
-        </Route>
+        <Route exact path="/" element={< Home />}/>
+        <Route exact path="/home" element={< Home />}/>
+        <Route path="/about" element={< About URL={URL}/>}/>
+        <Route path="/goals" element={< Goals URL={URL}/>}/>
+        <Route path="/habits" element={< Habits URL={URL}/>}/>
+        <Route path="/timeManagement" element={< TimeManagement URL={URL}/>}/>
       </Routes>
-      <Footer /> */}
+      <Footer />
 
-      <h1>Hello World</h1>
-      
+
+
     </div>
   );
 }

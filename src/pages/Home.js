@@ -1,38 +1,42 @@
-import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+// import { useState, useEffect } from "react";
+// import { Link } from "react-router-dom";
 
-function Home(props) {
-  // create state to hold projects
-  const [home, setHome] = useState(null);
+function Home() {
+  // create state to hold categories
+  // const [categories, setCategories] = useState(null);
 
-  //create function to make api call
-  const getHomeData = async () => {
-    //make api call and get response
-    const response = await fetch(props.URL + "home");
-    // turn response into javascript object
-    const data = await response.json();
-    // set the projects state to the data
-    setHome(data);
-  };
+  // //create function to make api call
+  // const getCategories = async () => {
+  //   //make api call and get response
+  //   const response = await fetch(props.URL + "home");
+  //   // turn response into javascript object
+  //   const category = await response.json();
+  //   // set the Categories state to the category
+  //   setCategories(category);
+  // };
 
-  // make an initial call for the data inside a useEffect, so it only happens once on component load
-  useEffect(() => getHomeData(), []);
+  // // make an initial call for the data inside a useEffect, so it only happens once on component load
+  // useEffect(() => getCategories(), []);
 
-  // define a function that will return the JSX needed once we get the data
-  const loaded = () => {
-    return home.map((category) => (
-      <div>
-        <Link to={category.route}>
-            <h2>{category.name}</h2>
-            <p>
-                {category.description}
-            </p>
-        </Link>
-      </div>
-    ));
-  };
+  // // define a function that will return the JSX needed once we get the data
+  // const loaded = () => {
 
-  return home ? loaded() : <h1>Loading...</h1>;
+  //   return categories.map((category) => (
+  //     <div>
+  //       <Link to={category.route}>
+  //           <h2>{category.name}</h2>
+  //           <p>
+  //             {category.description}
+  //           </p>
+  //       </Link>
+  //     </div>
+  //   ));
+  // };
+
+  // return categories ? loaded() : <h1>Loading...</h1>;
+
+  return <h1>Home is where the heart is</h1>
+
 }
 
 export default Home;
