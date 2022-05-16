@@ -1,22 +1,38 @@
 import './App.css';
 
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import { Route, Routes } from "react-router-dom";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Goals from "./pages/Goals";
+import Habits from "./pages/Habits";
+import TimeManagement from "./pages/TimeManagement";
+
+const URL = "https://freesource-library.herokuapp.com/";
+
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <Routes>
+        <Route exact path="/home">
+          <Home />
+        </Route>
+        <Route path="/about">
+          <About URL={URL} />
+        </Route>
+        <Route path="/goals">
+          <Goals URL={URL} />
+        </Route>
+        <Route path="/habits">
+          <Habits URL={URL} />
+        </Route>
+        <Route path="/timeManagement">
+          <TimeManagement URL={URL} />
+        </Route>
+      </Routes>
+      <Footer />
     </div>
   );
 }
