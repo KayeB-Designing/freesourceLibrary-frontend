@@ -9,12 +9,12 @@ import Goals from "./pages/Goals";
 import Habits from "./pages/Habits";
 import TimeManagement from "./pages/TimeManagement";
 
-const URL = "https://freesource-library.herokuapp.com/";
+const URL = "https://freesource-library.herokuapp.com/home";
 
 function App() {
   return (
     <div className="App">
-      <Header />
+      {/* <Header />
       <Routes>
         <Route exact path="/home">
           <Home />
@@ -32,7 +32,10 @@ function App() {
           <TimeManagement URL={URL} />
         </Route>
       </Routes>
-      <Footer />
+      <Footer /> */}
+
+      <h1>Hello World</h1>
+      
     </div>
   );
 }
