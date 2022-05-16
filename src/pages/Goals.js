@@ -37,7 +37,12 @@ function Goals(props) {
 
   // return goals ? loaded() : <h1>Loading...</h1>;
 
-  return <h1>Goal Setting</h1>
+  return (
+    <>
+      <h1>Goal Setting</h1>
+      <button>Download & Print PDF</button>
+    </>
+  )
 }
 
 export default Goals;

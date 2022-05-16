@@ -1,5 +1,5 @@
 // import { useState, useEffect } from "react";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Home() {
   // create state to hold categories
@@ -35,7 +35,29 @@ function Home() {
 
   // return categories ? loaded() : <h1>Loading...</h1>;
 
-  return <h1>Home is where the heart is</h1>
+  return (
+    <>
+      <h1>Categories</h1>
+      <Link to="../goals">
+      <h2>Goal Setting</h2>
+      <p>
+        category description
+      </p>
+      </Link>
+      <Link to="../habits">
+      <h2>Habit Building</h2>
+      <p>
+        category description
+      </p>
+      </Link>
+      <Link to="../timeManagement">
+      <h2>Time Management</h2>
+      <p>
+        category description
+      </p>
+      </Link>
+    </>
+  )
 
 }
 

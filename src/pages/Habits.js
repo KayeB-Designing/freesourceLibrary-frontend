@@ -37,7 +37,12 @@ function Habits(props) {
 
   // return habits ? loaded() : <h1>Loading...</h1>;
 
-  return <h1>Habit Building</h1>
+  return (
+    <>
+      <h1>Habit Building</h1>
+      <button>Download & Print PDF</button>
+    </>
+  )
 }
 
 export default Habits;

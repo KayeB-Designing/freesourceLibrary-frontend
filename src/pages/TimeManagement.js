@@ -37,7 +37,12 @@ function TimeManagement(props) {
 
   // return timeManagement ? loaded() : <h1>Loading...</h1>;
 
-  return <h1>Time Management</h1>
+  return (
+    <>
+      <h1>Time Management</h1>
+      <button>Download & Print PDF</button>
+    </>
+  )
 }
 
 export default TimeManagement;
