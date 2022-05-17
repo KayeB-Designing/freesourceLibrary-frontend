@@ -6,18 +6,18 @@ function Goals(props) {
   // console.log(`this is props at the start of the fn: ${props.URL}`)
   // console.log(`this is props at the start of the fn: ${props.apiURL}`)
   const [goals, setGoals] = useState(null);
-  // const [pdf, setPDF] = useState(null)
+  const [pdf, setPDF] = useState(null)
   const [click, setClick] = useState(false)
 
 
-  const myHeaders = new Headers();
-  myHeaders.append("Content-Type", "application/json");
-  const requestOptions = {
-      method: "get",
-      headers: myHeaders,
-      redirect: "follow",
+  // const myHeaders = new Headers();
+  // myHeaders.append("Content-Type", "application/json");
+  // const requestOptions = {
+  //     method: "get",
+  //     headers: myHeaders,
+  //     redirect: "follow",
       
-  };
+  // };
 
 
   const getGoalsData = async () => {
@@ -28,6 +28,15 @@ function Goals(props) {
     setGoals(data);
     // console.log(`this is data in getGoalsData(): ${data}`)
   };
+
+
+  function getPdf() {
+    fetch(`https://v1.nocodeapi.com/kayebedesigning/pdf/WKgezVWsvcSbNnwO/url2pdf?url=${props.URL}/goals`, requestOptions)
+    .then(response => response.text())
+    .then(result => console.log(`this is the fetch result: ${result}`))
+    .catch(error => console.log('error', error));
+  }
+
 
   // const getPdfData = async () => {
   //   const response = await fetch(`https://v1.nocodeapi.com/kayebedesigning/pdf/WKgezVWsvcSbNnwO/url2pdf?url=${props.URL}/goals`)
@@ -42,7 +51,7 @@ function Goals(props) {
 
 
   useEffect(() => getGoalsData(), []);
-  // useEffect(() => getPdfData());
+  useEffect(() => getPdf());
   // useEffect(() => setClick())
 
   const loaded = () => {
@@ -79,12 +88,7 @@ function Goals(props) {
   //   return created()
   // }
 
-  function getPdf() {
-    fetch(`https://v1.nocodeapi.com/kayebedesigning/pdf/WKgezVWsvcSbNnwO/url2pdf?url=${props.URL}/goals`, requestOptions)
-    .then(response => response.text())
-    .then(result => console.log(`this is the fetch result: ${result}`))
-    .catch(error => console.log('error', error));
-  }
+
 
   // function buttonClicked() {
   //   console.log(`clicked`)
@@ -95,7 +99,7 @@ function Goals(props) {
 
   const clicked = () => {
     console.log(`clicked`)
-    getPdf()
+    setPDF()
     setClick()
   }
 
