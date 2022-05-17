@@ -3,6 +3,8 @@ import { useState, useEffect } from "react";
 
 function Goals(props) {
   console.log(`this is props at the start of the fn: ${props}`)
+  console.log(`this is props at the start of the fn: ${props.URL}`)
+  console.log(`this is props at the start of the fn: ${props.apiURL}`)
   const [goals, setGoals] = useState(null);
   const [pdf, setPDF] = useState(null)
 
