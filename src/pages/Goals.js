@@ -82,7 +82,8 @@ function Goals(props) {
         {/* onClick={() => setCount(count + 1)} */}
         {/* onClick={() => setClick(click)} */}
         {/* <button onClick={created()}>Download & Print PDF</button> */}
-        <button onClick={console.log(`this button has been clicked`)}>Download & Print PDF</button>
+        {/* <button onClick={console.log(`this button has been clicked`)}>Download & Print PDF</button> */}
+        <button>Download & Print PDF</button>
         {/* onClick={() => setPDF()} */}
       </div>
       <div>
