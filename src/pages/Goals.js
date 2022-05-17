@@ -38,7 +38,7 @@ function Goals(props) {
     // .then(console.log(response))
     .then(result => console.log(`this is the fetch result: ${result}`))
     .catch(error => console.log('error', error));
-    setPDF(pdf)
+    // setPDF(pdf)
   }
 
 
@@ -103,7 +103,7 @@ function Goals(props) {
 
   const clicked = () => {
     console.log(`clicked`)
-    getPdf()
+    setPDF()
     setClick(click) 
   }
 
