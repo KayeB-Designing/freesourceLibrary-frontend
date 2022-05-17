@@ -17,21 +17,25 @@ function Goals(props) {
 
   const loaded = () => {
     // console.log(`This is goals: ${goals}`)
-    return goals.map((item) => (
-      <div>
+    return (
+      <>
         <h1>Resources</h1>
         <button>Download & Print PDF</button>
-        <a href={item.Link}>
-            <img src={item.qr} />
-            <h2>{item.name}</h2>
-            <p>
-                {item.type}
-                {item.description}
-                {item.email}
-            </p>
-        </a>
-      </div>
-    ));
+        goals.map((item) => (
+          <div>
+            <a href={item.Link}>
+              <img src={item.qr} />
+              <h2>{item.name}</h2>
+              <p>
+                  {item.type}
+                  {item.description}
+                  {item.email}
+              </p>
+            </a>
+          </div>
+      ));
+      </>
+    )
   };
 
   return goals ? loaded() : <h1>Loading...</h1>;
