@@ -7,7 +7,7 @@ function Goals(props) {
   // console.log(`this is props at the start of the fn: ${props.apiURL}`)
   const [goals, setGoals] = useState(null);
   // const [pdf, setPDF] = useState(null)
-  const [click, setClick] = useState(null)
+  // const [click, setClick] = useState(null)
 
 
   // const myHeaders = new Headers();
@@ -43,7 +43,7 @@ function Goals(props) {
 
   useEffect(() => getGoalsData(), []);
   // useEffect(() => getPdfData());
-  useEffect(() => setClick())
+  // useEffect(() => setClick())
 
   const loaded = () => {
     // console.log(`This is goals: ${goals}`)
@@ -86,11 +86,18 @@ function Goals(props) {
   //   .catch(error => console.log('error', error));
   // }
 
-  function buttonClicked() {
-    console.log(`clicked`)
-    // fetchPdf()
-    return click
+  // function buttonClicked() {
+  //   console.log(`clicked`)
+  //   // fetchPdf()
+  //   return click
+  // }
+
+
+  function hello(){
+    console.log(`hello`)
   }
+
+
 
 
   if(!goals){
@@ -107,6 +114,7 @@ function Goals(props) {
         {/* onClick={() => setClick(click)} */}
         {/* <button onClick={created()}>Download & Print PDF</button> */}
         {/* <button onClick={console.log(`this button has been clicked`)}>Download & Print PDF</button> */}
+        {/* <button onClick={buttonClicked()}>Download & Print PDF</button> */}
         <button onClick={buttonClicked()}>Download & Print PDF</button>
         {/* onClick={() => setPDF()} */}
       </div>
