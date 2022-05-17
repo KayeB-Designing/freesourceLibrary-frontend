@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+const axios = require('axios');
 
 function Goals(props) {
   console.log(`this is props: ${props}`)
@@ -19,6 +20,7 @@ function Goals(props) {
     return goals.map((item) => (
       <div>
         <h1>Resources</h1>
+        <button>Download & Print PDF</button>
         <a href={item.Link}>
             <img src={item.qr} />
             <h2>{item.name}</h2>

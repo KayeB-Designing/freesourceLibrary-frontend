@@ -17,6 +17,7 @@ function Habits(props) {
     return habits.map((item) => (
       <div>
         <h1>Resources</h1>
+        <button>Download & Print PDF</button>
         <a href={item.Link}>
             <img src={item.qr} />
             <h2>{item.name}</h2>
