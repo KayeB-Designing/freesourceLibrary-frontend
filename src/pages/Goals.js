@@ -42,7 +42,7 @@ function Goals(props) {
       <>
         <h1>Resources</h1>
         <button>Download & Print PDF</button>
-        {/* {goals} */}
+        loaded()
       </>
     )
   }
