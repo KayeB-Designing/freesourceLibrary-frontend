@@ -6,7 +6,7 @@ function Goals(props) {
   // console.log(`this is props at the start of the fn: ${props.URL}`)
   // console.log(`this is props at the start of the fn: ${props.apiURL}`)
   const [goals, setGoals] = useState(null);
-  // const [pdf, setPDF] = useState(null)
+  const [pdf, setPDF] = useState(null)
   const [click, setClick] = useState(null)
 
   const getGoalsData = async () => {
@@ -18,20 +18,21 @@ function Goals(props) {
     // console.log(`this is data in getGoalsData(): ${data}`)
   };
 
-  // const getPdfData = async () => {
-  //   const response = await fetch(`https://v1.nocodeapi.com/kayebedesigning/pdf/WKgezVWsvcSbNnwO/url2pdf?url=${props.URL}/goals`)
-  //   // console.log(`this is the props.apiURL in getPdfData(): ${props.apiURL}`)
-  //   console.log(`this is the props.url  in getPdfData(): ${props.URL}`)
-  //   console.log(`this is the props.apiURLprops.URL/goals  in getPdfData(): https://v1.nocodeapi.com/kayebedesigning/pdf/WKgezVWsvcSbNnwO/url2pdf?url=${props.URL}/goals`)
-  //   console.log(`this is the response: ${response}`)
-  //   const data = await response.json;
-  //   setPDF(data)
-  //   console.log(`this is data: ${data}`)
-  // }
+  const getPdfData = async () => {
+    const response = await fetch(`https://v1.nocodeapi.com/kayebedesigning/pdf/WKgezVWsvcSbNnwO/url2pdf?url=${props.URL}/goals`)
+    // console.log(`this is the props.apiURL in getPdfData(): ${props.apiURL}`)
+    // console.log(`this is the props.url  in getPdfData(): ${props.URL}`)
+    // console.log(`this is the props.apiURLprops.URL/goals  in getPdfData(): https://v1.nocodeapi.com/kayebedesigning/pdf/WKgezVWsvcSbNnwO/url2pdf?url=${props.URL}/goals`)
+    console.log(`this is the response: ${response}`)
+    const data = await response.json;
+    setPDF(data)
+    console.log(`this is data: ${data}`)
+  }
+
 
   useEffect(() => getGoalsData(), []);
-  // useEffect(() => getPdfData());
-  // useEffect(() => setClick())
+  useEffect(() => getPdfData());
+  useEffect(() => setClick())
 
   const loaded = () => {
     // console.log(`This is goals: ${goals}`)
@@ -50,7 +51,7 @@ function Goals(props) {
     ));
   };
 
-  // const created = () => pdf
+  const created = () => pdf
 
   // return goals ? loaded() : <h1>Loading...</h1>;
 
@@ -64,7 +65,7 @@ function Goals(props) {
   // const clicked = () => click
   function clicked() {
     console.log(`clicked`)
-    return click
+    return created()
   }
 
 
@@ -75,8 +76,8 @@ function Goals(props) {
       <>
       <div>
         <h1>Goal Setting Resources</h1>
-        {/* <button onClick={clicked()}>Download & Print PDF</button> */}
-        <button onClick={() => setClick(click)}>Download & Print PDF</button>
+        <button onClick={clicked()}>Download & Print PDF</button>
+        {/* <button onClick={() => setClick(click)}>Download & Print PDF</button> */}
         
         {/* onClick={() => setCount(count + 1)} */}
         {/* onClick={() => setClick(click)} */}
