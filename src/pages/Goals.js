@@ -16,7 +16,7 @@ function Goals(props) {
   };
 
   const getPdfData = async () => {
-    const response = await fetch(`https://v1.nocodeapi.com/kayebedesigning/pdf/WKgezVWsvcSbNnwO/url2pdf?url=${props.URL}/goals`)
+    const response = await fetch(`${props.apiURL}${props.URL}/goals`)
     console.log(`this is the props.apiURL: ${props.apiURL}`)
     console.log(`this is the props.url: ${props.URL}`)
     console.log(`this is the props.apiURLprops.URL/goals: ${props.apiURL}${props.URL}/goals`)
