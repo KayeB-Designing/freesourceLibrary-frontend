@@ -6,18 +6,18 @@ function Goals(props) {
   // console.log(`this is props at the start of the fn: ${props.URL}`)
   // console.log(`this is props at the start of the fn: ${props.apiURL}`)
   const [goals, setGoals] = useState(null);
-  const [pdf, setPDF] = useState(null)
+  // const [pdf, setPDF] = useState(null)
   const [click, setClick] = useState(false)
 
 
-  const myHeaders = new Headers();
-  myHeaders.append("Content-Type", "application/json");
-  const requestOptions = {
-      method: "get",
-      headers: myHeaders,
-      redirect: "follow",
+  // const myHeaders = new Headers();
+  // myHeaders.append("Content-Type", "application/json");
+  // const requestOptions = {
+  //     method: "get",
+  //     headers: myHeaders,
+  //     redirect: "follow",
       
-  };
+  // };
 
 
   const getGoalsData = async () => {
@@ -42,20 +42,20 @@ function Goals(props) {
   // }
 
 
-  const getPdfData = async () => {
-    const response = await fetch(`https://v1.nocodeapi.com/kayebedesigning/pdf/WKgezVWsvcSbNnwO/url2pdf?url=https://freesourcelibrary.netlify.app/goals&inline=Download&document_size=Letter&orientation=portrait`)
-    // console.log(`this is the props.apiURL in getPdfData(): ${props.apiURL}`)
-    // console.log(`this is the props.url  in getPdfData(): ${props.URL}`)
-    // console.log(`this is the props.apiURLprops.URL/goals  in getPdfData(): https://v1.nocodeapi.com/kayebedesigning/pdf/WKgezVWsvcSbNnwO/url2pdf?url=${props.URL}/goals`)
-    console.log(`this is the getPdfData response: ${response}`)
-    const data = await response.json;
-    setPDF(data)
-    console.log(`this is  getPdfData data: ${data}`)
-  }
+  // const getPdfData = async () => {
+  //   const response = await fetch(`https://v1.nocodeapi.com/kayebedesigning/pdf/WKgezVWsvcSbNnwO/url2pdf?url=${props.URL}/goals`)
+  //   // console.log(`this is the props.apiURL in getPdfData(): ${props.apiURL}`)
+  //   // console.log(`this is the props.url  in getPdfData(): ${props.URL}`)
+  //   // console.log(`this is the props.apiURLprops.URL/goals  in getPdfData(): https://v1.nocodeapi.com/kayebedesigning/pdf/WKgezVWsvcSbNnwO/url2pdf?url=${props.URL}/goals`)
+  //   console.log(`this is the getPdfData response: ${response}`)
+  //   const data = await response.json;
+  //   setPDF(data)
+  //   console.log(`this is  getPdfData data: ${data}`)
+  // }
 
 
   useEffect(() => getGoalsData(), []);
-  useEffect(() => getPdfData());
+  // useEffect(() => getPdf());
   // useEffect(() => setClick())
 
   const loaded = () => {
@@ -75,7 +75,7 @@ function Goals(props) {
     ));
   };
 
-  const created = () => pdf
+  // const created = () => pdf
 
   // return goals ? loaded() : <h1>Loading...</h1>;
 
@@ -103,7 +103,7 @@ function Goals(props) {
 
   const clicked = () => {
     console.log(`clicked`)
-    created()
+    // setPDF()
     setClick(click) 
   }
 
@@ -125,7 +125,7 @@ function Goals(props) {
         {/* <button onClick={created()}>Download & Print PDF</button> */}
         {/* <button onClick={console.log(`this button has been clicked`)}>Download & Print PDF</button> */}
         {/* <button onClick={buttonClicked()}>Download & Print PDF</button> */}
-        <a target="_blank" href="https://v1.nocodeapi.com/kayebedesigning/pdf/WKgezVWsvcSbNnwO/url2pdf?url=https://freesourcelibrary.netlify.app/goals&inline=Download&document_size=Letter&orientation=portrait" download><button onClick={clicked}>Download & Print PDF</button></a>
+        <a target="_blank" href="https://v1.nocodeapi.com/kayebedesigning/pdf/WKgezVWsvcSbNnwO/url2pdf?url=https://62841f7dfc7426007baa9c85--freesourcelibrary.netlify.app/goals&inline=Download&document_size=Letter&orientation=portrait" download><button onClick={clicked}>Download & Print PDF</button></a>
         {/* <button onClick={clicked}>Download & Print PDF</button> */}
         {/* onClick={() => setPDF()} */}
       </div>
