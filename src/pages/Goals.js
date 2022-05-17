@@ -95,6 +95,7 @@ function Goals(props) {
 
   const hello = () => {
     console.log(`hello`)
+    setClick()
   }
 
 
