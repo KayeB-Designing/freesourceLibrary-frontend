@@ -23,7 +23,7 @@ function Goals(props) {
     console.log(`this is the props.url  in getPdfData(): ${props.URL}`)
     console.log(`this is the props.apiURLprops.URL/goals  in getPdfData(): https://v1.nocodeapi.com/kayebedesigning/pdf/WKgezVWsvcSbNnwO/url2pdf?url=${props.URL}/goals`)
     console.log(`this is the response: ${response}`)
-    const data = await response;
+    const data = await response.json;
     setPDF(data)
     console.log(`this is data: ${data}`)
   }
