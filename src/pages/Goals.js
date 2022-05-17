@@ -2,26 +2,26 @@ import { useState, useEffect } from "react";
 // const axios = require('axios');
 
 function Goals(props) {
-  console.log(`this is props at the start of the fn: ${props}`)
-  console.log(`this is props at the start of the fn: ${props.URL}`)
-  console.log(`this is props at the start of the fn: ${props.apiURL}`)
+  // console.log(`this is props at the start of the fn: ${props}`)
+  // console.log(`this is props at the start of the fn: ${props.URL}`)
+  // console.log(`this is props at the start of the fn: ${props.apiURL}`)
   const [goals, setGoals] = useState(null);
   const [pdf, setPDF] = useState(null)
 
   const getGoalsData = async () => {
     const response = await fetch(`${props.URL}/goals`);
     const data = await response.json();
-    console.log(`this is the props.url in getGoalsData(): ${props.URL}`)
-    console.log(`this is the response in getGoalsData(): ${response}`)
+    // console.log(`this is the props.url in getGoalsData(): ${props.URL}`)
+    // console.log(`this is the response in getGoalsData(): ${response}`)
     setGoals(data);
-    console.log(`this is data in getGoalsData(): ${data}`)
+    // console.log(`this is data in getGoalsData(): ${data}`)
   };
 
   const getPdfData = async () => {
-    const response = await fetch(`${props.apiURL}${props.URL}/goals`)
-    console.log(`this is the props.apiURL in getPdfData(): ${props.apiURL}`)
+    const response = await fetch(`https://v1.nocodeapi.com/kayebedesigning/pdf/WKgezVWsvcSbNnwO/url2pdf?url=${props.URL}/goals`)
+    // console.log(`this is the props.apiURL in getPdfData(): ${props.apiURL}`)
     console.log(`this is the props.url  in getPdfData(): ${props.URL}`)
-    console.log(`this is the props.apiURLprops.URL/goals  in getPdfData(): ${props.apiURL}${props.URL}/goals`)
+    console.log(`this is the props.apiURLprops.URL/goals  in getPdfData(): https://v1.nocodeapi.com/kayebedesigning/pdf/WKgezVWsvcSbNnwO/url2pdf?url=${props.URL}/goals`)
     console.log(`this is the response: ${response}`)
     const data = await response;
     setPDF(data)
