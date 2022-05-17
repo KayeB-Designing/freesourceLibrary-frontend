@@ -34,7 +34,18 @@ function Goals(props) {
     ));
   };
 
-  return goals ? loaded() : <h1>Loading...</h1>;
+  // return goals ? loaded() : <h1>Loading...</h1>;
+  if(!goals){
+    return <h2>Loading...</h2>
+  }else{
+    return (
+      <>
+        <h1>Resources</h1>
+        <button>Download & Print PDF</button>
+        {goals}
+      </>
+    )
+  }
 
   // return (
   //   <>
