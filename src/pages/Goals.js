@@ -7,7 +7,7 @@ function Goals(props) {
   // console.log(`this is props at the start of the fn: ${props.apiURL}`)
   const [goals, setGoals] = useState(null);
   // const [pdf, setPDF] = useState(null)
-  // const [click, setClick] = useState(null)
+  const [click, setClick] = useState(null)
 
 
   const myHeaders = new Headers();
@@ -43,7 +43,7 @@ function Goals(props) {
 
   useEffect(() => getGoalsData(), []);
   // useEffect(() => getPdfData());
-  // useEffect(() => setClick())
+  useEffect(() => setClick())
 
   const loaded = () => {
     // console.log(`This is goals: ${goals}`)
@@ -89,6 +89,7 @@ function Goals(props) {
   function buttonClicked() {
     console.log(`clicked`)
     fetchPdf()
+    return click
   }
 
 
