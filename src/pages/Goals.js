@@ -35,8 +35,8 @@ function Goals(props) {
     // , requestOptions
     )
     .then(response => response.text())
+    .then(console.log(response))
     .then(result => console.log(`this is the fetch result: ${result}`))
-    .then(result => console.log(`this is the fetch response: ${response}`))
     .catch(error => console.log('error', error));
     setPDF(pdf)
   }
