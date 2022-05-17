@@ -5,8 +5,8 @@ function Home(props) {
 
   const URL = "https://freesource-library.herokuapp.com";
   // const {} = props.Home
-  console.log(`This is props: ${props}`)
-  console.log(`This is URL: ${URL}`)
+  // console.log(`This is props: ${props}`)
+  // console.log(`This is URL: ${URL}`)
 
   return (
     <>
