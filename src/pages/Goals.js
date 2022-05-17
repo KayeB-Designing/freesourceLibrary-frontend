@@ -31,7 +31,7 @@ function Goals(props) {
 
   useEffect(() => getGoalsData(), []);
   // useEffect(() => getPdfData());
-  useEffect(() => setClick())
+  // useEffect(() => setClick())
 
   const loaded = () => {
     // console.log(`This is goals: ${goals}`)
@@ -75,7 +75,11 @@ function Goals(props) {
       <>
       <div>
         <h1>Goal Setting Resources</h1>
-        <button onClick={clicked()}>Download & Print PDF</button>
+        {/* <button onClick={clicked()}>Download & Print PDF</button> */}
+        <button onClick={() => setClick(click)}>Download & Print PDF</button>
+        
+        {/* onClick={() => setCount(count + 1)} */}
+        {/* onClick={() => setClick(click)} */}
         {/* <button onClick={created()}>Download & Print PDF</button> */}
         {/* <button onClick={console.log(`this button has been clicked`)}>Download & Print PDF</button> */}
         {/* onClick={() => setPDF()} */}
