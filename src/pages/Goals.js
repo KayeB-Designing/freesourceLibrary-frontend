@@ -21,7 +21,7 @@ function Goals(props) {
       <>
         <h1>Resources</h1>
         <button>Download & Print PDF</button>
-        goals.map((item) => (
+        goals.map((item) (
           <div>
             <a href={item.Link}>
               <img src={item.qr} />
