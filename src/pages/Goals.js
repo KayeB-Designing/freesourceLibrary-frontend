@@ -17,8 +17,13 @@ function Goals(props) {
 
   const getPdfData = async () => {
     const response = await fetch(`${props.apiURL}${props.URL}/goals`)
-    const data = await response.json();
+    // console.log(`this is the props.apiURL: ${props.apiURL}`)
+    // console.log(`this is the props.url: ${props.URL}`)
+    // console.log(`this is the props.apiURLprops.URL/goals: ${props.apiURL}${props.URL}/goals`)
+    // console.log(`this is the response: ${response}`)
+    const data = await response;
     setPDF(data)
+    // console.log(`this is data: ${data}`)
   }
 
   useEffect(() => getGoalsData(), []);
