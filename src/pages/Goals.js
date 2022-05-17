@@ -57,7 +57,7 @@ function Goals(props) {
       <>
       <div>
         <h1>Goal Setting Resources</h1>
-        <button onClick={getPdfData}>Download & Print PDF</button>
+        <button onClick={getPdfData()}>Download & Print PDF</button>
       </div>
       <div>
         {loaded()}
