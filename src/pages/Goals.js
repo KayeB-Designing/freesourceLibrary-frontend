@@ -19,8 +19,6 @@ function Goals(props) {
     // console.log(`This is goals: ${goals}`)
     return goals.map((item) => (
       <div>
-        <h1>Resources</h1>
-        
         <a href={item.Link}>
             <img src={item.qr} />
             <h2>{item.name}</h2>
