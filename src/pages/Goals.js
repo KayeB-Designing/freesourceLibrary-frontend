@@ -6,18 +6,18 @@ function Goals(props) {
   // console.log(`this is props at the start of the fn: ${props.URL}`)
   // console.log(`this is props at the start of the fn: ${props.apiURL}`)
   const [goals, setGoals] = useState(null);
-  const [pdf, setPDF] = useState(null)
+  // const [pdf, setPDF] = useState(null)
   const [click, setClick] = useState(false)
 
 
-  const myHeaders = new Headers();
-  myHeaders.append("Content-Type", "application/json");
-  const requestOptions = {
-      method: "get",
-      headers: myHeaders,
-      redirect: "follow",
+  // const myHeaders = new Headers();
+  // myHeaders.append("Content-Type", "application/json");
+  // const requestOptions = {
+  //     method: "get",
+  //     headers: myHeaders,
+  //     redirect: "follow",
       
-  };
+  // };
 
 
   const getGoalsData = async () => {
@@ -30,16 +30,16 @@ function Goals(props) {
   };
 
 
-  function getPdf() {
-    fetch(`https://v1.nocodeapi.com/kayebedesigning/pdf/WKgezVWsvcSbNnwO/url2pdf?url=${props.URL}/goals&inline=Download&document_size=Letter&orientation=portrait`
-    , requestOptions
-    )
-    .then(response => response.text())
-    // .then(console.log(response))
-    .then(result => console.log(`this is the fetch result: ${result}`))
-    .catch(error => console.log('error', error));
-    // setPDF(pdf)
-  }
+  // function getPdf() {
+  //   fetch(`https://v1.nocodeapi.com/kayebedesigning/pdf/WKgezVWsvcSbNnwO/url2pdf?url=${props.URL}/goals&inline=Download&document_size=Letter&orientation=portrait`
+  //   , requestOptions
+  //   )
+  //   .then(response => response.text())
+  //   // .then(console.log(response))
+  //   .then(result => console.log(`this is the fetch result: ${result}`))
+  //   .catch(error => console.log('error', error));
+  //   // setPDF(pdf)
+  // }
 
 
   // const getPdfData = async () => {
@@ -103,7 +103,7 @@ function Goals(props) {
 
   const clicked = () => {
     console.log(`clicked`)
-    setPDF()
+    // setPDF()
     setClick(click) 
   }
 
@@ -125,7 +125,8 @@ function Goals(props) {
         {/* <button onClick={created()}>Download & Print PDF</button> */}
         {/* <button onClick={console.log(`this button has been clicked`)}>Download & Print PDF</button> */}
         {/* <button onClick={buttonClicked()}>Download & Print PDF</button> */}
-        <button onClick={clicked}>Download & Print PDF</button>
+        <a href="https://v1.nocodeapi.com/kayebedesigning/pdf/WKgezVWsvcSbNnwO/url2pdf?url=https://freesource-library.herokuapp.com/goals&inline=Download&document_size=Letter&orientation=portrait" download><button onClick={clicked}>Download & Print PDF</button></a>
+        {/* <button onClick={clicked}>Download & Print PDF</button> */}
         {/* onClick={() => setPDF()} */}
       </div>
       <div>
