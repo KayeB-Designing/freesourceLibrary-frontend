@@ -14,14 +14,14 @@ import TimeManagement from "./pages/TimeManagement";
 function App() {
 
   const URL = "https://freesource-library.herokuapp.com";
+  // const URL = "http://localhost:4000";
 
   return (
     <div className="App">
       <Header />
-      {/* <Home /> */}
       <Routes>
         <Route exact path="/" element={< Home />}/>
-        <Route exact path="/home" element={< Home />}/>
+        <Route path="/home" element={< Home />}/>
         <Route path="/about" element={< About URL={URL}/>}/>
         <Route path="/goals" element={< Goals URL={URL}/>}/>
         <Route path="/habits" element={< Habits URL={URL}/>}/>
