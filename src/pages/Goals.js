@@ -116,7 +116,7 @@ function Goals(props) {
         {/* <button onClick={created()}>Download & Print PDF</button> */}
         {/* <button onClick={console.log(`this button has been clicked`)}>Download & Print PDF</button> */}
         {/* <button onClick={buttonClicked()}>Download & Print PDF</button> */}
-        <button onClick={hello()}>Download & Print PDF</button>
+        <button onClick={hello}>Download & Print PDF</button>
         {/* onClick={() => setPDF()} */}
       </div>
       <div>
