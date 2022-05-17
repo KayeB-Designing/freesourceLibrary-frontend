@@ -125,7 +125,7 @@ function Goals(props) {
         {/* <button onClick={created()}>Download & Print PDF</button> */}
         {/* <button onClick={console.log(`this button has been clicked`)}>Download & Print PDF</button> */}
         {/* <button onClick={buttonClicked()}>Download & Print PDF</button> */}
-        <a target="_blank" href="https://v1.nocodeapi.com/kayebedesigning/pdf/WKgezVWsvcSbNnwO/url2pdf?url=https://62841f7dfc7426007baa9c85--freesourcelibrary.netlify.app/goals&inline=Download&document_size=Letter&orientation=portrait" download><button onClick={clicked}>Download & Print PDF</button></a>
+        <a target="_blank" href="https://v1.nocodeapi.com/kayebedesigning/pdf/WKgezVWsvcSbNnwO/url2pdf?url=https://freesource-library.herokuapp.com/goals&inline=Download&document_size=Letter&orientation=portrait" download><button onClick={clicked}>Download & Print PDF</button></a>
         {/* <button onClick={clicked}>Download & Print PDF</button> */}
         {/* onClick={() => setPDF()} */}
       </div>
