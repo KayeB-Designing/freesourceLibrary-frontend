@@ -100,9 +100,8 @@ function Goals(props) {
 
   const clicked = () => {
     console.log(`clicked`)
-    // setPDF()
-    setClick(click)
-    return pdf
+    getPdf()
+    setClick(click) 
   }
 
 
