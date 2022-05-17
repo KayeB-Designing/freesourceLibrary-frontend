@@ -21,8 +21,6 @@ function TimeManagement(props) {
   const loaded = () => {
     return timeManagement.map((item) => (
       <div>
-        <h1>Resources</h1>
-        <button>Download & Print PDF</button>
         <a href={item.Link}>
             <img src={item.qr} />
             <h2>{item.name}</h2>
@@ -36,7 +34,19 @@ function TimeManagement(props) {
     ));
   };
 
-  return timeManagement ? loaded() : <h1>Loading...</h1>;
+  if(!timeManagement){
+    return <h2>Loading...</h2>
+  }else{
+    return (
+      <>
+        <h1>Resources</h1>
+        <button>Download & Print PDF</button>
+        {loaded()}
+      </>
+    )
+  }
+
+  // return timeManagement ? loaded() : <h1>Loading...</h1>;
 
   // return (
   //   <>

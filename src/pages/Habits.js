@@ -16,8 +16,6 @@ function Habits(props) {
   const loaded = () => {
     return habits.map((item) => (
       <div>
-        <h1>Resources</h1>
-        <button>Download & Print PDF</button>
         <a href={item.Link}>
             <img src={item.qr} />
             <h2>{item.name}</h2>
@@ -31,7 +29,19 @@ function Habits(props) {
     ));
   };
 
-  return habits ? loaded() : <h1>Loading...</h1>;
+  if(!habits){
+    return <h2>Loading...</h2>
+  }else{
+    return (
+      <>
+        <h1>Resources</h1>
+        <button>Download & Print PDF</button>
+        {loaded()}
+      </>
+    )
+  }
+
+  // return habits ? loaded() : <h1>Loading...</h1>;
 
   // return (
   //   <>
