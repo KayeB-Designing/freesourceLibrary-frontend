@@ -86,6 +86,11 @@ function Goals(props) {
     .catch(error => console.log('error', error));
   }
 
+  function buttonClicked() {
+    console.log(`clicked`)
+    fetchPdf()
+  }
+
 
   if(!goals){
     return <h2>Loading Goal Setting Resources, Thank You for Your Patience!!!</h2>
@@ -101,7 +106,7 @@ function Goals(props) {
         {/* onClick={() => setClick(click)} */}
         {/* <button onClick={created()}>Download & Print PDF</button> */}
         {/* <button onClick={console.log(`this button has been clicked`)}>Download & Print PDF</button> */}
-        <button onClick={fetchPdf()}>Download & Print PDF</button>
+        <button onClick={buttonClicked()}>Download & Print PDF</button>
         {/* onClick={() => setPDF()} */}
       </div>
       <div>
