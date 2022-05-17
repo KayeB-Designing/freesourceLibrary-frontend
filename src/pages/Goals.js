@@ -61,7 +61,12 @@ function Goals(props) {
   //   </>
   // );
 
-  const clicked = () => click
+  // const clicked = () => click
+  function clicked() {
+    console.log(`clicked`)
+    return click
+  }
+
 
   if(!goals){
     return <h2>Loading Goal Setting Resources, Thank You for Your Patience!!!</h2>
