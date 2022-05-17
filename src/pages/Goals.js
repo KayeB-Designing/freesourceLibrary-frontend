@@ -34,14 +34,14 @@ function Goals(props) {
     ));
   };
 
-  // return goals ? loaded() : <h1>Loading...</h1>;
+  return goals ? loaded() : <h1>Loading...</h1>;
 
-  return (
-    <>
-    <h1>Resources</h1>
-    goals ? loaded() : <h1>Loading...</h1>
-    </>
-  );
+  // return (
+  //   <>
+  //   <h1>Resources</h1>
+  //   goals ? loaded() : <h1>Loading...</h1>
+  //   </>
+  // );
 
   // if(!goals){
   //   return <h2>Loading...</h2>
