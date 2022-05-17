@@ -51,7 +51,7 @@ function Goals(props) {
     ));
   };
 
-  const created = () => pdf
+  // const created = () => pdf
 
   // return goals ? loaded() : <h1>Loading...</h1>;
 
