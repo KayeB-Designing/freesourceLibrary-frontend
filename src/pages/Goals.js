@@ -10,14 +10,14 @@ function Goals(props) {
   const [click, setClick] = useState(false)
 
 
-  // const myHeaders = new Headers();
-  // myHeaders.append("Content-Type", "application/json");
-  // const requestOptions = {
-  //     method: "get",
-  //     headers: myHeaders,
-  //     redirect: "follow",
+  const myHeaders = new Headers();
+  myHeaders.append("Content-Type", "application/json");
+  const requestOptions = {
+      method: "get",
+      headers: myHeaders,
+      redirect: "follow",
       
-  // };
+  };
 
 
   const getGoalsData = async () => {
@@ -35,6 +35,7 @@ function Goals(props) {
     .then(response => response.text())
     .then(result => console.log(`this is the fetch result: ${result}`))
     .catch(error => console.log('error', error));
+    setPDF(pdf)
   }
 
 
@@ -99,8 +100,9 @@ function Goals(props) {
 
   const clicked = () => {
     console.log(`clicked`)
-    setPDF()
-    setClick()
+    // setPDF()
+    setClick(click)
+    return pdf
   }
 
 
