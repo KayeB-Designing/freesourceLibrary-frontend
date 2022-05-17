@@ -10,14 +10,14 @@ function Goals(props) {
   const [click, setClick] = useState(null)
 
 
-  const myHeaders = new Headers();
-  myHeaders.append("Content-Type", "application/json");
-  const requestOptions = {
-      method: "get",
-      headers: myHeaders,
-      redirect: "follow",
+  // const myHeaders = new Headers();
+  // myHeaders.append("Content-Type", "application/json");
+  // const requestOptions = {
+  //     method: "get",
+  //     headers: myHeaders,
+  //     redirect: "follow",
       
-  };
+  // };
 
 
   const getGoalsData = async () => {
@@ -79,16 +79,16 @@ function Goals(props) {
   //   return created()
   // }
 
-  function fetchPdf() {
-    fetch(`https://v1.nocodeapi.com/kayebedesigning/pdf/WKgezVWsvcSbNnwO/url2pdf?url=${props.URL}/goals`, requestOptions)
-    .then(response => response.text())
-    .then(result => console.log(result))
-    .catch(error => console.log('error', error));
-  }
+  // function fetchPdf() {
+  //   fetch(`https://v1.nocodeapi.com/kayebedesigning/pdf/WKgezVWsvcSbNnwO/url2pdf?url=${props.URL}/goals`, requestOptions)
+  //   .then(response => response.text())
+  //   .then(result => console.log(`this is the fetch result: ${result}`))
+  //   .catch(error => console.log('error', error));
+  // }
 
   function buttonClicked() {
     console.log(`clicked`)
-    fetchPdf()
+    // fetchPdf()
     return click
   }
 
