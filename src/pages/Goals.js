@@ -2,24 +2,24 @@ import { useState, useEffect } from "react";
 // const axios = require('axios');
 
 function Goals(props) {
-  // console.log(`this is props: ${props}`)
+  console.log(`this is props at the start of the fn: ${props}`)
   const [goals, setGoals] = useState(null);
   const [pdf, setPDF] = useState(null)
 
   const getGoalsData = async () => {
     const response = await fetch(`${props.URL}/goals`);
     const data = await response.json();
-    // console.log(`this is the props.url: ${props.URL}`)
-    // console.log(`this is the response: ${response}`)
+    console.log(`this is the props.url in getGoalsData(): ${props.URL}`)
+    console.log(`this is the response in getGoalsData(): ${response}`)
     setGoals(data);
-    // console.log(`this is data: ${data}`)
+    console.log(`this is data in getGoalsData(): ${data}`)
   };
 
   const getPdfData = async () => {
     const response = await fetch(`${props.apiURL}${props.URL}/goals`)
-    console.log(`this is the props.apiURL: ${props.apiURL}`)
-    console.log(`this is the props.url: ${props.URL}`)
-    console.log(`this is the props.apiURLprops.URL/goals: ${props.apiURL}${props.URL}/goals`)
+    console.log(`this is the props.apiURL in getPdfData(): ${props.apiURL}`)
+    console.log(`this is the props.url  in getPdfData(): ${props.URL}`)
+    console.log(`this is the props.apiURLprops.URL/goals  in getPdfData(): ${props.apiURL}${props.URL}/goals`)
     console.log(`this is the response: ${response}`)
     const data = await response;
     setPDF(data)
@@ -46,6 +46,8 @@ function Goals(props) {
     ));
   };
 
+  const created = () => pdf
+
   // return goals ? loaded() : <h1>Loading...</h1>;
 
   // return (
@@ -62,7 +64,7 @@ function Goals(props) {
       <>
       <div>
         <h1>Goal Setting Resources</h1>
-        <button onClick={() => setPDF()}>Download & Print PDF</button>
+        <button onClick={created()}>Download & Print PDF</button>
         {/* <button onClick={console.log(`this button has been clicked`)}>Download & Print PDF</button> */}
         {/* onClick={() => setPDF()} */}
       </div>
