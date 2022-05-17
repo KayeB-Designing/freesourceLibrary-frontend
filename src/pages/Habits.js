@@ -1,14 +1,9 @@
 import { useState, useEffect } from "react";
 
 function Habits(props) {
-  // create state to hold projects
   const [habits, setHabits] = useState(null);
-
-  //create function to make api call
   const getHabitsData = async () => {
-    //make api call and get response
-    const response = await fetch(props.URL + "habits");
-    // turn response into javascript object
+    const response = await fetch(`${props.URL}/habits`);
     const data = await response.json();
     // set the projects state to the data
     setHabits(data);
