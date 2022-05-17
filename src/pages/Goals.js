@@ -7,7 +7,7 @@ function Goals(props) {
   // console.log(`this is props at the start of the fn: ${props.apiURL}`)
   const [goals, setGoals] = useState(null);
   const [pdf, setPDF] = useState(null)
-  const [click, setClick] = useState(null)
+  // const [click, setClick] = useState(null)
 
   const getGoalsData = async () => {
     const response = await fetch(`${props.URL}/goals`);
@@ -32,7 +32,7 @@ function Goals(props) {
 
   useEffect(() => getGoalsData(), []);
   useEffect(() => getPdfData());
-  useEffect(() => setClick())
+  // useEffect(() => setClick())
 
   const loaded = () => {
     // console.log(`This is goals: ${goals}`)
@@ -63,10 +63,10 @@ function Goals(props) {
   // );
 
   // const clicked = () => click
-  function clicked() {
-    console.log(`clicked`)
-    return created()
-  }
+  // function clicked() {
+  //   console.log(`clicked`)
+  //   return created()
+  // }
 
 
   if(!goals){
@@ -76,13 +76,13 @@ function Goals(props) {
       <>
       <div>
         <h1>Goal Setting Resources</h1>
-        <button onClick={clicked()}>Download & Print PDF</button>
+        {/* <button onClick={clicked()}>Download & Print PDF</button> */}
         {/* <button onClick={() => setClick(click)}>Download & Print PDF</button> */}
         
         {/* onClick={() => setCount(count + 1)} */}
         {/* onClick={() => setClick(click)} */}
         {/* <button onClick={created()}>Download & Print PDF</button> */}
-        {/* <button onClick={console.log(`this button has been clicked`)}>Download & Print PDF</button> */}
+        <button onClick={console.log(`this button has been clicked`)}>Download & Print PDF</button>
         {/* onClick={() => setPDF()} */}
       </div>
       <div>
