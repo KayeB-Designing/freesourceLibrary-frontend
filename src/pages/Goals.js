@@ -7,7 +7,7 @@ function Goals(props) {
   // console.log(`this is props at the start of the fn: ${props.apiURL}`)
   const [goals, setGoals] = useState(null);
   // const [pdf, setPDF] = useState(null)
-  // const [click, setClick] = useState(null)
+  const [click, setClick] = useState(null)
 
 
   // const myHeaders = new Headers();
@@ -93,7 +93,7 @@ function Goals(props) {
   // }
 
 
-  function hello(){
+  const hello = () => {
     console.log(`hello`)
   }
 
