@@ -42,14 +42,18 @@ function Goals(props) {
   // );
 
   if(!goals){
-    return <h2>Loading...</h2>
+    return <h2>Loading Goal Setting Resources, Thank You for Your Patience!!!</h2>
   }else{
     return (
       <>
-        <h1>Resources</h1>
+      <div>
+        <h1>Goal Setting Resources</h1>
         <button>Download & Print PDF</button>
+      </div>
+      <div>
         {loaded()}
-      </>
+      </div>
+    </>
     )
   }
 

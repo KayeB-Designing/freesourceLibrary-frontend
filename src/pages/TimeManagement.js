@@ -35,13 +35,17 @@ function TimeManagement(props) {
   };
 
   if(!timeManagement){
-    return <h2>Loading...</h2>
+    return <h2>Loading Time Management Resources, Thank You for Your Patience!!!</h2>
   }else{
     return (
       <>
-        <h1>Resources</h1>
-        <button>Download & Print PDF</button>
-        {loaded()}
+        <div>
+          <h1>Time Management Resources</h1>
+          <button>Download & Print PDF</button>
+        </div>
+        <div>
+          {loaded()}
+        </div>
       </>
     )
   }

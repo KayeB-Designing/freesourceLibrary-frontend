@@ -30,14 +30,18 @@ function Habits(props) {
   };
 
   if(!habits){
-    return <h2>Loading...</h2>
+    return <h2>Loading Habit Building Resources, Thank You for Your Patience!!!</h2>
   }else{
     return (
       <>
-        <h1>Resources</h1>
+      <div>
+        <h1>Habit Building Resources</h1>
         <button>Download & Print PDF</button>
+      </div>
+      <div>
         {loaded()}
-      </>
+      </div>
+    </>
     )
   }
 
