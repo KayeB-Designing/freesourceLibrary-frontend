@@ -31,7 +31,7 @@ function Goals(props) {
 
 
   function getPdf() {
-    fetch(`https://v1.nocodeapi.com/kayebedesigning/pdf/WKgezVWsvcSbNnwO/url2pdf?url=${props.URL}/goals`
+    fetch(`https://v1.nocodeapi.com/kayebedesigning/pdf/WKgezVWsvcSbNnwO/url2pdf?url=${props.URL}/goals&inline=Download&document_size=Letter&orientation=portrait`
     // , requestOptions
     )
     .then(response => response.text())
