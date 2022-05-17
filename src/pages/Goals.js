@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 function Goals(props) {
   // console.log(`this is props: ${props}`)
   const [goals, setGoals] = useState(null);
-  // const [pdf, setPDF] = useState(null)
+  const [pdf, setPDF] = useState(null)
 
   const getGoalsData = async () => {
     const response = await fetch(`${props.URL}/goals`);
@@ -15,14 +15,14 @@ function Goals(props) {
     // console.log(`this is data: ${data}`)
   };
 
-  // const getPdfData = async () => {
-  //   const response = await fetch(`${props.apiURL}${props.URL}/goals`)
-  //   const data = await response.json();
-  //   setPDF(data)
-  // }
+  const getPdfData = async () => {
+    const response = await fetch(`${props.apiURL}${props.URL}/goals`)
+    const data = await response.json();
+    setPDF(data)
+  }
 
   useEffect(() => getGoalsData(), []);
-  // useEffect(() => getPdfData());
+  useEffect(() => getPdfData());
 
   const loaded = () => {
     // console.log(`This is goals: ${goals}`)
@@ -57,8 +57,9 @@ function Goals(props) {
       <>
       <div>
         <h1>Goal Setting Resources</h1>
-        {/* <button onClick={getPdfData()}>Download & Print PDF</button> */}
-        <button onClick={console.log(`this button has been clicked`)}>Download & Print PDF</button>
+        <button onClick={() => setPDF()}>Download & Print PDF</button>
+        {/* <button onClick={console.log(`this button has been clicked`)}>Download & Print PDF</button> */}
+        {/* onClick={() => setPDF()} */}
       </div>
       <div>
         {loaded()}
