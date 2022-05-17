@@ -80,7 +80,7 @@ function Goals(props) {
   // }
 
   function fetchPdf() {
-    return fetch(`https://v1.nocodeapi.com/kayebedesigning/pdf/WKgezVWsvcSbNnwO/url2pdf?url=${props.URL}/goals`, requestOptions)
+    fetch(`https://v1.nocodeapi.com/kayebedesigning/pdf/WKgezVWsvcSbNnwO/url2pdf?url=${props.URL}/goals`, requestOptions)
     .then(response => response.text())
     .then(result => console.log(result))
     .catch(error => console.log('error', error));
@@ -101,7 +101,7 @@ function Goals(props) {
         {/* onClick={() => setClick(click)} */}
         {/* <button onClick={created()}>Download & Print PDF</button> */}
         {/* <button onClick={console.log(`this button has been clicked`)}>Download & Print PDF</button> */}
-        <button>Download & Print PDF</button>
+        <button onClick={fetchPdf()}>Download & Print PDF</button>
         {/* onClick={() => setPDF()} */}
       </div>
       <div>
