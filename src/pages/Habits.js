@@ -43,14 +43,10 @@ function Habits(props) {
   }else{
     return (
       <>
-      <div>
         <h1>Habit Building Resources</h1>
-        <a target="_blank" href="https://v1.nocodeapi.com/kayebedesigning/pdf/WKgezVWsvcSbNnwO/url2pdf?url=https://freesource-library.herokuapp.com/habits/&inline=Download&document_size=Letter&orientation=portrait" download><button onClick={buttonClicked}>Download List as JSON</button></a>
-      </div>
-      <div>
         {loaded()}
-      </div>
-    </>
+        <a target="_blank" href="https://v1.nocodeapi.com/kayebedesigning/pdf/WKgezVWsvcSbNnwO/url2pdf?url=https://freesource-library.herokuapp.com/habits/&inline=Download&document_size=Letter&orientation=portrait" download><button onClick={buttonClicked}>Download List as JSON</button></a>
+      </>
     )
   }
 

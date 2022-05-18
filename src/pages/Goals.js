@@ -6,7 +6,7 @@ function Goals(props) {
   // console.log(`this is props at the start of the fn: ${props.URL}`)
   // console.log(`this is props at the start of the fn: ${props.apiURL}`)
   const [goals, setGoals] = useState(null);
-  const [pdf, setPDF] = useState(null)
+  // const [pdf, setPDF] = useState(null)
   const [click, setClick] = useState(false)
 
 
@@ -31,32 +31,19 @@ function Goals(props) {
   };
 
 
-  function getPdf() {
-    fetch(`https://v1.nocodeapi.com/kayebedesigning/pdf/WKgezVWsvcSbNnwO/url2pdf?url=https://freesourcelibrary.netlify.app/goals/&inline=Download&document_size=Letter&orientation=portrait`
-    , requestOptions
-    )
-    .then(response => response.text())
-    // .then(console.log(response))
-    .then(result => console.log(`this is the fetch result: ${result}`))
-    .catch(error => console.log('error', error));
-    setPDF(pdf)
-  }
-
-
-  // const getPdfData = async () => {
-  //   const response = await fetch(`https://v1.nocodeapi.com/kayebedesigning/pdf/WKgezVWsvcSbNnwO/url2pdf?url=${props.URL}/goals`)
-  //   // console.log(`this is the props.apiURL in getPdfData(): ${props.apiURL}`)
-  //   // console.log(`this is the props.url  in getPdfData(): ${props.URL}`)
-  //   // console.log(`this is the props.apiURLprops.URL/goals  in getPdfData(): https://v1.nocodeapi.com/kayebedesigning/pdf/WKgezVWsvcSbNnwO/url2pdf?url=${props.URL}/goals`)
-  //   console.log(`this is the getPdfData response: ${response}`)
-  //   const data = await response.json;
-  //   setPDF(data)
-  //   console.log(`this is  getPdfData data: ${data}`)
+  // function getPdf() {
+  //   fetch(`https://v1.nocodeapi.com/kayebedesigning/pdf/WKgezVWsvcSbNnwO/url2pdf?url=https://freesourcelibrary.netlify.app/goals/&inline=Download&document_size=Letter&orientation=portrait`
+  //   , requestOptions
+  //   )
+  //   .then(response => response.text())
+  //   // .then(console.log(response))
+  //   .then(result => console.log(`this is the fetch result: ${result}`))
+  //   .catch(error => console.log('error', error));
+  //   setPDF(pdf)
   // }
 
-
   useEffect(() => {getGoalsData()}, []);
-  useEffect(() => getPdf());
+  // useEffect(() => getPdf());
   useEffect(() => setClick())
 
   const loaded = () => {
@@ -76,24 +63,7 @@ function Goals(props) {
     ));
   };
 
-  const created = () => pdf
-
-  // return goals ? loaded() : <h1>Loading...</h1>;
-
-  // return (
-  //   <>
-  //   <h1>Resources</h1>
-  //   goals ? loaded() : <h1>Loading...</h1>
-  //   </>
-  // );
-
-  // const clicked = () => click
-  // function clicked() {
-  //   console.log(`clicked`)
-  //   return created()
-  // }
-
-
+  // const created = () => pdf
 
   function buttonClicked() {
     console.log(`clicked`)
@@ -101,48 +71,17 @@ function Goals(props) {
     return click
   }
 
-
-  // const clicked = () => {
-  //   console.log(`clicked`)
-  //   getPdf()
-  //   setClick(click) 
-  // }
-
-
-
-
   if(!goals){
     return <h2>Loading Goal Setting Resources, Thank You for Your Patience!!!</h2>
   }else{
     return (
       <>
-      <div>
         <h1>Goal Setting Resources</h1>
-        {/* <button target="_blank" onClick={clicked}>Download & Print PDF</button> */}
-        {/* <button onClick={() => setClick(click)}>Download & Print PDF</button> */}
-        
-        {/* onClick={() => setCount(count + 1)} */}
-        {/* onClick={() => setClick(click)} */}
-        {/* <button onClick={created()}>Download & Print PDF</button> */}
-        {/* <button onClick={console.log(`this button has been clicked`)}>Download & Print PDF</button> */}
-        {/* <button onClick={buttonClicked}  target="_blank">Download & Print PDF</button> */}
-        <a target="_blank" href="https://v1.nocodeapi.com/kayebedesigning/pdf/WKgezVWsvcSbNnwO/url2pdf?url=https://freesource-library.herokuapp.com/goals/&inline=Download&document_size=Letter&orientation=portrait" download><button onClick={buttonClicked}>Download List as JSON</button></a>
-        {/* <button onClick={clicked}>Download & Print PDF</button> */}
-        {/* onClick={() => setPDF()} */}
-      </div>
-      <div>
         {loaded()}
-      </div>
+        <a target="_blank" href="https://v1.nocodeapi.com/kayebedesigning/pdf/WKgezVWsvcSbNnwO/url2pdf?url=https://freesource-library.herokuapp.com/goals/&inline=Download&document_size=Letter&orientation=portrait" download><button onClick={buttonClicked}>Download List as JSON</button></a>
     </>
     )
   }
-
-  // return (
-  //   <>
-  //     <h1>Goal Setting</h1>
-  //     <button>Download & Print PDF</button>
-  //   </>
-  // )
 };
 
 export default Goals;
