@@ -34,7 +34,6 @@ function Habits(props) {
   }else{
     return (
       <>
-      {props.children}
       <div>
         <h1>Habit Building Resources</h1>
         <button>Download & Print PDF</button>
