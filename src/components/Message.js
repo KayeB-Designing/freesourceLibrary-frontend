@@ -35,8 +35,11 @@ export default function Message() {
       return (
         <div>
           <h2>Quote of the day:</h2>
-          <p>{message.content}</p>
-          <p>{message.author}</p>
+          <p>
+            {message.content}
+            <a target="_blank" href="https://v1.nocodeapi.com/kayebedesigning/pdf/WKgezVWsvcSbNnwO/url2pdf?url=https://freesourcelibrary.netlify.app/home/&inline=Download&document_size=Letter&orientation=portrait" download><button onClick={buttonClicked}>Print Quote</button></a>
+          </p>
+          {/* <p>{message.author}</p> */}
         </div>
       )
   }

@@ -13,6 +13,7 @@ function Header(props) {
     return (
       <header>
       <h1>Freesource Library Header</h1>
+      <Message />
       <nav style={navStyle}>
         <Link to="/home">
           <div>Home</div>
@@ -21,7 +22,6 @@ function Header(props) {
           <div>About</div>
         </Link>
       </nav>
-      <Message />
     </header>
     );
 }
