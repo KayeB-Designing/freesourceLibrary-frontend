@@ -45,7 +45,7 @@ function Habits(props) {
       <>
       <div>
         <h1>Habit Building Resources</h1>
-        <button>Download & Print PDF</button>
+        <a target="_blank" href="https://v1.nocodeapi.com/kayebedesigning/pdf/WKgezVWsvcSbNnwO/url2pdf?url=https://freesource-library.herokuapp.com/habits/&inline=Download&document_size=Letter&orientation=portrait" download><button onClick={buttonClicked}>Download List as JSON</button></a>
       </div>
       <div>
         {loaded()}
