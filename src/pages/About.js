@@ -24,6 +24,9 @@ export default function About(props) {
         <p>{about.importance}</p>
         <h2>How did the Freesource Library idea come to be?</h2>
         <p>{about.how}</p>
+        <h2>Thanks for your Support!!!</h2>
+        <p>{about.thanks}</p>
+        <p>{about.author}</p>
       </div>
     )
   }
