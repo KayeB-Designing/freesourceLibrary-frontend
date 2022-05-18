@@ -28,11 +28,11 @@ function App() {
         <Route path="/home" element={< Home />}/>
         <Route path="/about" element={< About URL={URL}/>}/>
         <Route path="/goals" element={< Goals URL={URL}/>}/>
-        <Route path="/goals/pdf" element={< GoalsPDF URL={URL}/>}/>
+        {/* <Route path="/goals/pdf" element={< GoalsPDF URL={URL}/>}/> */}
         <Route path="/habits" element={< Habits URL={URL}/>}/>
-        <Route path="/habits/pdf" element={< HabitsPDF URL={URL}/>}/>
+        {/* <Route path="/habits/pdf" element={< HabitsPDF URL={URL}/>}/> */}
         <Route path="/timeManagement" element={< TimeManagement URL={URL}/>}/>
-        <Route path="/timeManagement/pdf" element={< TimeManagementPDF URL={URL}/>}/>
+        {/* <Route path="/timeManagement/pdf" element={< TimeManagementPDF URL={URL}/>}/> */}
       </Routes>
       <Footer />
 
