@@ -13,7 +13,6 @@ root.render(
     <React.StrictMode>
       <Router>
         <App />
-        <Message />
       </Router>
     // </React.StrictMode>
 );
