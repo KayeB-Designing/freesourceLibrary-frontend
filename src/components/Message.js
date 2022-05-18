@@ -19,9 +19,9 @@ export default function Message() {
   function getMessageData(){
     fetch('https://quotes15.p.rapidapi.com/quotes/random/', options)
     .then(response => response.json())
-    .then(response => console.log(response))
+    // .then(response => console.log(response))
     .then(data => setMessage(data))
-    .then(data => console.log(data))
+    .then(data => console.log(`This is data: ${data}`))
     .catch(err => console.error(err))
   };
 
