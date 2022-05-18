@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Message from '../components/Message';
+// import Message from '../components/Message';
 
 function Header(props) {
   const navStyle = {
@@ -13,7 +13,7 @@ function Header(props) {
     return (
       <header>
       <h1>Freesource Library Header</h1>
-      <Message />
+      {/* <Message /> */}
       <nav style={navStyle}>
         <Link to="/home">
           <div>Home</div>
