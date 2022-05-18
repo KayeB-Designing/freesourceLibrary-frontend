@@ -26,7 +26,7 @@ function App() {
       <Routes>
         <Route exact path="/" element={< Home />}/>
         <Route path="/home" element={< Home />}/>
-        <Route path="/index.html" element={< Home />}/>
+        <Route path="/index.html" element={< Goals />}/>
         <Route path="/about" element={< About URL={URL}/>}/>
         <Route path="/goals" element={< Goals URL={URL}/>}/>
         {/* <Route path="/goals/pdf" element={< GoalsPDF URL={URL}/>}/> */}
