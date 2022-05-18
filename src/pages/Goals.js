@@ -97,8 +97,8 @@ function Goals(props) {
 
   function buttonClicked() {
     console.log(`clicked`)
-    getPdf()
-    return click
+    created()
+    return (click)
   }
 
 
