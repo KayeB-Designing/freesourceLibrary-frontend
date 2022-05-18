@@ -95,18 +95,18 @@ function Goals(props) {
 
 
 
-  // function buttonClicked() {
-  //   console.log(`clicked`)
-  //   getPdf()
-  //   return click
-  // }
-
-
-  const clicked = () => {
+  function buttonClicked() {
     console.log(`clicked`)
     getPdf()
-    setClick(click) 
+    return click
   }
+
+
+  // const clicked = () => {
+  //   console.log(`clicked`)
+  //   getPdf()
+  //   setClick(click) 
+  // }
 
 
 
@@ -118,14 +118,14 @@ function Goals(props) {
       <>
       <div>
         <h1>Goal Setting Resources</h1>
-        <button onClick={clicked}>Download & Print PDF</button>
+        {/* <button target="_blank" onClick={clicked}>Download & Print PDF</button> */}
         {/* <button onClick={() => setClick(click)}>Download & Print PDF</button> */}
         
         {/* onClick={() => setCount(count + 1)} */}
         {/* onClick={() => setClick(click)} */}
         {/* <button onClick={created()}>Download & Print PDF</button> */}
         {/* <button onClick={console.log(`this button has been clicked`)}>Download & Print PDF</button> */}
-        {/* <button onClick={buttonClicked()}>Download & Print PDF</button> */}
+        <button onClick={buttonClicked}  target="_blank">Download & Print PDF</button>
         {/* <a target="_blank" href="https://v1.nocodeapi.com/kayebedesigning/pdf/WKgezVWsvcSbNnwO/url2pdf?url=https://freesourcelibrary.netlify.app/goals/&inline=Download&document_size=Letter&orientation=portrait" download><button onClick={clicked}>Download & Print PDF</button></a> */}
         {/* <button onClick={clicked}>Download & Print PDF</button> */}
         {/* onClick={() => setPDF()} */}
