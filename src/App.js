@@ -25,7 +25,6 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Message />
       <Routes>
         <Route exact path="/" element={< Home />}/>
         <Route path="/home" element={< Home />}/>
@@ -34,6 +33,7 @@ function App() {
         <Route path="/habits" element={< Habits URL={URL}/>}/>
         <Route path="/timeManagement" element={< TimeManagement URL={URL}/>}/>
       </Routes>
+      <Message />
       <Footer />
 
 
