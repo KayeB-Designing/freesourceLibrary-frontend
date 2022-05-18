@@ -16,7 +16,7 @@ function Habits(props) {
   const loaded = () => {
     return habits.map((item) => (
       <div>
-        <a href={item.Link}>
+        <a target="_blank" href={item.Link}>
             <img src={item.qr} />
             <h2>{item.name}</h2>
             <p>
