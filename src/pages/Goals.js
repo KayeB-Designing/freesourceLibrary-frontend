@@ -97,7 +97,7 @@ function Goals(props) {
 
   // function buttonClicked() {
   //   console.log(`clicked`)
-  //   // fetchPdf()
+  //   getPdf()
   //   return click
   // }
 
@@ -118,7 +118,7 @@ function Goals(props) {
       <>
       <div>
         <h1>Goal Setting Resources</h1>
-        <button onClick={clicked()}>Download & Print PDF</button>
+        <button onClick={clicked}>Download & Print PDF</button>
         {/* <button onClick={() => setClick(click)}>Download & Print PDF</button> */}
         
         {/* onClick={() => setCount(count + 1)} */}
