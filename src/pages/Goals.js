@@ -10,7 +10,7 @@ function Goals(props) {
   const [click, setClick] = useState(false)
 
   const GoalsPdfRef = React.forwardRef((props, ref) => {
-    <div ref={ref}>{props.children}</div>
+    <div ref={GoalsPdfRef}>{props.children}</div>
   })
 
 
@@ -119,7 +119,7 @@ function Goals(props) {
   }else{
     return (
       <>
-      <div ref={ref} >
+      <div ref={GoalsPdfRef} >
         <h1>Goal Setting Resources</h1>
         {/* <button onClick={clicked()}>Download & Print PDF</button> */}
         {/* <button onClick={() => setClick(click)}>Download & Print PDF</button> */}
