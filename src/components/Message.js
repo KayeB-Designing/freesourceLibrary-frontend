@@ -14,5 +14,11 @@ export default function Message() {
     .then(response => console.log(response))
     .catch(err => console.error(err));
 
-    return <h2>hello</h2>
+    return (
+      <>
+        <h2>hello</h2>
+        <h3>{response.content}</h3>
+        <h4>{response.content}</h4>
+      </>
+    )
 }
