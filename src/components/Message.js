@@ -3,10 +3,13 @@ import React, {useState, useEffect} from 'react'
 export default function Message() {
 
   const [message, setMessage] = useState(null)
+  const [click, setClick] = useState(false)
 
   useEffect(() => {
     getMessageData()
   }, [])
+
+  useEffect(() => setClick())
 
   const options = {
     method: 'GET',
@@ -27,7 +30,10 @@ export default function Message() {
 
 
   // console.log(`This is message: ${message}`)
-
+  function buttonClicked() {
+    console.log(`clicked`)
+    return click
+  }
 
   if(!message){
     <h2>Loading a quote for you!</h2>
