@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 
-export default function Message(props) {
+export default function Message() {
 
   const [message, setMessage] = useState(null)
 
@@ -21,6 +21,7 @@ export default function Message(props) {
     .then(response => response.json())
     .then(response => console.log(response))
     .then(data => setMessage(data))
+    .then(data => console.log(data))
     .catch(err => console.error(err))
   };
 
