@@ -97,7 +97,7 @@ function Goals(props) {
 
   function buttonClicked() {
     console.log(`clicked`)
-    created()
+    // created()
     return click
   }
 

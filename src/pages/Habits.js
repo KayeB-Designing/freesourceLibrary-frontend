@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 
 function Habits(props) {
   const [habits, setHabits] = useState(null);
+  const [click, setClick] = useState(false)
+
   const getHabitsData = async () => {
     const response = await fetch(`${props.URL}/habits`);
     const data = await response.json();
@@ -11,6 +13,7 @@ function Habits(props) {
 
   // make an initial call for the data inside a useEffect, so it only happens once on component load
   useEffect(() => {getHabitsData()}, []);
+  useEffect(() => setClick())
 
   // define a function that will return the JSX needed once we get the data
   const loaded = () => {
@@ -28,6 +31,12 @@ function Habits(props) {
       </div>
     ));
   };
+
+  function buttonClicked() {
+    console.log(`clicked`)
+    // created()
+    return click
+  }
 
   if(!habits){
     return <h2>Loading Habit Building Resources, Thank You for Your Patience!!!</h2>
