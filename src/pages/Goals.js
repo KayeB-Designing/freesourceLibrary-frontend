@@ -11,14 +11,14 @@ function Goals(props) {
 
 
 
-  const myHeaders = new Headers();
-  myHeaders.append("Content-Type", "application/json");
-  const requestOptions = {
-      method: "get",
-      headers: myHeaders,
-      redirect: "follow",
+  // const myHeaders = new Headers();
+  // myHeaders.append("Content-Type", "application/json");
+  // const requestOptions = {
+  //     method: "get",
+  //     headers: myHeaders,
+  //     redirect: "follow",
       
-  };
+  // };
 
 
   const getGoalsData = async () => {
