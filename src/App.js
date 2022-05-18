@@ -8,6 +8,7 @@ import About from "./pages/About";
 import Goals from "./pages/Goals";
 import Habits from "./pages/Habits";
 import TimeManagement from "./pages/TimeManagement";
+import Message from './Message';
 // import GoalsPDF from './pages/GoalsPDF';
 // import HabitsPDF from './pages/HabitsPDF';
 // import TimeManagementPDF from './pages/TimeManagementPDF';
