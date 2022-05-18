@@ -21,16 +21,20 @@ export default function Message() {
     .then(response => response.json())
     // .then(response => console.log(response))
     .then(data => setMessage(data))
-    .then(data => console.log(`This is data: ${data}`))
+    // .then(data => console.log(`This is data: ${data}`))
     .catch(err => console.error(err))
   };
+
+
+  // console.log(`This is message: ${message}`)
+
 
   if(!message){
     <h2>Loading a quote for you!</h2>
     }else{
       return (
         <div>
-          <h2>Quote:</h2>
+          <h2>Quote of the day:</h2>
           <p>{message.content}</p>
           <p>{message.author}</p>
         </div>

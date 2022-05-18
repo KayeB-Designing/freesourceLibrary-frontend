@@ -9,7 +9,7 @@ import About from "./pages/About";
 import Goals from "./pages/Goals";
 import Habits from "./pages/Habits";
 import TimeManagement from "./pages/TimeManagement";
-import Message from './components/Message';
+// import Message from './components/Message';
 // import GoalsPDF from './pages/GoalsPDF';
 // import HabitsPDF from './pages/HabitsPDF';
 // import TimeManagementPDF from './pages/TimeManagementPDF';
@@ -25,7 +25,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Message />
+      {/* <Message /> */}
       <Routes>
         <Route exact path="/" element={< Home />}/>
         <Route path="/home" element={< Home />}/>

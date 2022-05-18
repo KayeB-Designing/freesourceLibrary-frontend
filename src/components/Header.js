@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Message from '../components/Message';
 
 function Header(props) {
   const navStyle = {
@@ -20,6 +21,7 @@ function Header(props) {
           <div>About</div>
         </Link>
       </nav>
+      <Message />
     </header>
     );
 }
