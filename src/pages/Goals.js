@@ -9,6 +9,10 @@ function Goals(props) {
   // const [pdf, setPDF] = useState(null)
   const [click, setClick] = useState(false)
 
+  const GoalsPdfRef = React.forwardRef((props, ref) => {
+    <div ref={ref}>{props.children}</div>
+  })
+
 
   // const myHeaders = new Headers();
   // myHeaders.append("Content-Type", "application/json");
