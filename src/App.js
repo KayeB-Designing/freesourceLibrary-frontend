@@ -8,9 +8,9 @@ import About from "./pages/About";
 import Goals from "./pages/Goals";
 import Habits from "./pages/Habits";
 import TimeManagement from "./pages/TimeManagement";
-import GoalsPDF from './pages/GoalsPDF';
-import HabitsPDF from './pages/HabitsPDF';
-import TimeManagementPDF from './pages/TimeManagementPDF';
+// import GoalsPDF from './pages/GoalsPDF';
+// import HabitsPDF from './pages/HabitsPDF';
+// import TimeManagementPDF from './pages/TimeManagementPDF';
 
 
 
@@ -27,7 +27,7 @@ function App() {
         <Route exact path="/" element={< Home />}/>
         <Route path="/home" element={< Home />}/>
         <Route path="/about" element={< About URL={URL}/>}/>
-        <Route path="/goals" element={< Goals URL={URL}/>} component={Goals}/>
+        <Route path="/goals" element={< Goals URL={URL}/>} render={Goals}/>
         {/* <Route path="/goals/pdf" element={< GoalsPDF URL={URL}/>}/> */}
         <Route path="/habits" element={< Habits URL={URL}/>}/>
         {/* <Route path="/habits/pdf" element={< HabitsPDF URL={URL}/>}/> */}
