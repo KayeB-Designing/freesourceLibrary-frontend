@@ -55,7 +55,7 @@ function Goals(props) {
   // }
 
 
-  useEffect(() => getGoalsData(), []);
+  useEffect(() => {getGoalsData()}, []);
   // useEffect(() => getPdf());
   // useEffect(() => setClick())
 
