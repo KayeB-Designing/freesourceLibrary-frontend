@@ -119,6 +119,7 @@ function Goals(props) {
   }else{
     return (
       <>
+      {props.children}
       <div ref={GoalsPdfRef} >
         <h1>Goal Setting Resources</h1>
         {/* <button onClick={clicked()}>Download & Print PDF</button> */}
