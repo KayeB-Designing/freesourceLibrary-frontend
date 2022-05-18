@@ -1,6 +1,13 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 
-export default function Message() {
+export default function Message(props) {
+
+  const [message, setMessage] = useState(null)
+
+  useEffect(() => {
+    getMessageData()
+  }, [])
+
   const options = {
     method: 'GET',
     headers: {
@@ -8,17 +15,24 @@ export default function Message() {
       'X-RapidAPI-Key': '7dc5c7d94amsh5950acede55f00ap1606fbjsncf5bef6f77af'
     }
   };
-  
-  fetch('https://quotes15.p.rapidapi.com/quotes/random/', options)
+
+  function getMessageData(){
+    fetch('https://quotes15.p.rapidapi.com/quotes/random/', options)
     .then(response => response.json())
     .then(response => console.log(response))
-    .catch(err => console.error(err));
+    .then(data => setMessage(data))
+    .catch(err => console.error(err))
+  };
 
-    return (
-      <>
-        <h2>hello</h2>
-        <h3>{response.content}</h3>
-        <h4>{response.content}</h4>
-      </>
-    )
+  if(!message){
+    <h2>Loading a quote for you!</h2>
+    }else{
+      return (
+        <div>
+          <h2>Quote:</h2>
+          <p>{message.content}</p>
+          <p>{message.author}</p>
+        </div>
+      )
+  }
 }
