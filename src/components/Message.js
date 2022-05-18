@@ -14,5 +14,5 @@ export default function Message() {
     .then(response => console.log(response))
     .catch(err => console.error(err));
 
-    return <h2>{response}</h2>
+    return <h2>{response.content}</h2>
 }
