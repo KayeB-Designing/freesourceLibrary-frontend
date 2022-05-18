@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+// import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 function Home(props) {
@@ -22,19 +22,19 @@ function Home(props) {
       <Link to="../goals">
       <h2>Goal Setting</h2>
       <p>
-        category description
+        The process of deciding what you want to achieve or what you want someone else to achieve over a particular period.
       </p>
       </Link>
       <Link to="../habits">
       <h2>Habit Building</h2>
       <p>
-        category description
+        An act, behavioral response, practice, or custom established in one's repertoire by frequent repetition of the same activity.
       </p>
       </Link>
       <Link to="../timeManagement">
       <h2>Time Management</h2>
       <p>
-        category description
+        The ability to use one's time effectively or productively.
       </p>
       </Link>
     </>
