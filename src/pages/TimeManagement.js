@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-function TimeManagement(props) {
+function TimeManagement(props) {s
   const [timeManagement, setTimeManagement] = useState(null);
   const [click, setClick] = useState(false)
 
@@ -49,6 +49,7 @@ function TimeManagement(props) {
       </div>
     )
   }
+
 }
 
 export default TimeManagement;
