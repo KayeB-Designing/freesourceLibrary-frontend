@@ -1,13 +1,25 @@
+// import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 function Home(props) {
 
   const URL = "https://freesource-library.herokuapp.com";
+  // const {} = props.Home
+  // console.log(`This is props: ${props}`)
+  // console.log(`This is URL: ${URL}`)
 
   return (
     <div className="contentContainer" >
       <h1 className="pageTitle">Free Resource Categories</h1>
       <hr className="lineThick" />
+      {/* <div>
+        <Link to={category.path}>
+        <h2>{category.name}</h2>
+        <p>
+          {category.name}
+        </p>
+        </Link>
+      </div> */}
       <div className="result">
         <Link to="../goals">
           <h2 className="itemTitle">Goal Setting</h2>
