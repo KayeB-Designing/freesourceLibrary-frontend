@@ -4,7 +4,8 @@
   color: #02425D;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr, 3fr, 1fr, 1fr
+  grid-template-rows: 1fr, 3fr, 1fr, 1fr;
+  font-size: 1.25rem;
 }
 
 .header {
@@ -29,21 +30,32 @@
   grid-row: 1/3
 }
 
+.headerTxt {
+  grid-column: 2/2;
+  /* min-width: 100%; */
+}
+
 .headerName {
   /* background-color: white; */
   /* color: #378846; */
   /* color: #378846; */
   /* color: white; */
   color: #F17501;
-  grid-column: 2/2;
+  /* grid-column: 2/2; */
   grid-row: 1/3;
   /* width: 100%; */
+  /* font-family: 'Coda Caption', sans-serif; */
+  font-family: 'Cinzel', serif;
+  /* font-family: 'Tapestry', cursive; */
 }
 
 .nameSpan {
   /* color: #378846; */
   /* color: #F17501; */
   color: white;
+  /* font-family: 'Tapestry', cursive; */
+  font-family: 'Cinzel', serif;
+  /* font-family: 'Coda Caption', sans-serif; */
 }
 
 .headerSlogan {
@@ -51,16 +63,19 @@
   /* color: #378846; */
   color: #F17501;
   /* color: white; */
-  grid-column: 2/2;
-  grid-row: 2/3
+  /* grid-column: 2/2; */
+  grid-row: 2/3;
+  /* font-family: 'Coda Caption', sans-serif; */
+  font-family: 'Cinzel', serif;
 }
 
 .nav {
   background-color: #378846;
-  grid-column: 2/2;
+  /* grid-column: 2/2; */
   grid-row: 3/3;
   display: grid;
   grid-template-columns: 2;
+  font-family: 'Coda Caption', sans-serif;
 }
 
 .navLink {
@@ -80,7 +95,7 @@
   /* background-color:#378846; */
   background-color: white;
   grid-row: 2/2;
-  padding: 2rem;
+  padding: 2rem, 2rem, 0, 2rem;
 }
 
 .lineThick {
@@ -95,10 +110,13 @@
 
 .pageTitle {
   color: #F17501;
+  font-family: 'Cinzel', serif;
+  /* font-family: 'Tapestry', cursive; */
 }
 
 /* .result {
   background-color: white;
+  margin: 0, .5rem, 0, .5rem;
 } */
 
 .itemTitle {
@@ -110,6 +128,11 @@
   /* background-color: rgb(53, 253, 120); */
   color: #378846;
   text-decoration: none;
+  font-family: 'Coda Caption', sans-serif;
+  /* padding: 0rem, 5rem; */
+  padding-left: 2rem;
+  padding-right: 2rem
+
 }
 
 .descrList {
@@ -122,21 +145,62 @@
   text-decoration: none;
 }
 
-/* .resourceLink {
-  background-color: aqua;
-  color: brown;
+.descrSpan {
+  font-weight: bold;
+}
+
+.itemSpan {
+  color: #F17501;
+  font-family: 'Cinzel', serif;
+}
+
+.resourceLink, a {
+  text-decoration: none;
+  /* font-family: 'Coda Caption', sans-serif; */
+  font-family: 'Cinzel', serif;
+}
+
+/* .thickBlock {
+  margin: 0, .5rem, 0, .5rem;
 } */
 
-/* .aboutImg {
-  background-color: rgb(53, 90, 253);
-  padding: 1rem;
-} */
+.aboutGrid {
+  display: grid;
+  grid-template-columns: 1fr, 2fr;
+  /* grid-template-rows: 1fr; */
+  /* justify-content: space-between; */
+  justify-items: center;
+}
+
+.thanksMsg {
+  grid-column: 2/2;
+  /* grid-row: 1/1; */
+}
+
+
+.aboutImg {
+  border-radius: 50%;
+  /* border: 5px solid #02425D; */
+  /* grid-row: 1/1; */
+  grid-column: 1/1;
+  margin: 1rem;
+  /* margin: 1rem;
+  vertical-align: middle;
+  background-color: aqua;
+  margin: 5rem; */
+} 
+
+
+.authorSpan {
+  color: #02425D;
+  font-weight: bold;
+}
 
 
 .quoteBlock {
   background-color: white;
   grid-row: 3/3;
-  padding: 2rem;
+  padding: 2rem, 2rem, 0, 2rem;
 }
 
 .quoteTitle {
@@ -145,6 +209,7 @@
 
 .quote {
   background-color: white;
+  font-family: 'Coda Caption', sans-serif;
 }
 
 .quotePDF {
@@ -156,20 +221,43 @@
 .footer {
   background-color: white;
   grid-row: 4/4;
-  padding: 2rem;
+  padding: 2rem, 2rem, 0, 2rem;
 }
 
-/* .qr{
-  background-color: crimson;
-  padding: 1rem;
-} */
+.footerGrid {
+  display: grid;
+  grid-template-columns: 1fr, 3fr;
+  grid-template-rows: 1fr;
+  justify-content: space-around;
+  justify-items: center;
+}
+
+.footerLine {
+  grid-column: 1/2;
+  grid-row: 1/1;
+  background-color: #378846;
+  height: 10px;
+}
+
+.qr{
+  grid-column: 1/1;
+  grid-row: 1/1;
+  padding: .25rem;
+  max-width: 75px;
+  max-height: 75px;
+}
 
 .footerMsg {
   background-color: white;
+  font-family: 'Coda Caption', sans-serif;
+  color: #02425D;
+  grid-column: 2/2;
+  grid-row: 1/1;
 }
 
 button {
   background-color: #F17501;
   color: white;
   border: solid 2px #02425D;
+  font-family: 'Coda Caption', sans-serif;
 }

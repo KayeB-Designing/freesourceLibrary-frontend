@@ -10,7 +10,7 @@ function Home(props) {
 
   return (
     <div className="contentContainer" >
-      <h1 className="pageTitle">Categories</h1>
+      <h1 className="pageTitle">Free Resource Categories</h1>
       <hr className="lineThick" />
       {/* <div>
         <Link to={category.path}>

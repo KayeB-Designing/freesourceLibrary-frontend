@@ -38,13 +38,14 @@ export default function About(props) {
           <p className="descr">{about.how}</p>
         </div>
         <hr className="lineThin" />
-        <div  className="result">
-          <h2 className="itemTitle">Thanks for your Support!!!</h2>
-          <p className="descr">{about.thanks}</p>
-          <p className="descr">{about.author}</p>
+        <div  className="result aboutGrid">
+          <h2 className="itemTitle aboutGridTitle">Thanks for your Support!!!</h2>
+          <div className="aboutMsg">
+          <p className="descr thanksMsg">{about.thanks}</p>
+          <p className="descr thanksMsg"><span className="authorSpan"><h2>{about.author}</h2></span></p>
+          </div>
           <img  className="descr aboutImg" src="https://thumbs2.imgbox.com/34/fe/YDsWLhUR_t.png" alt="Kaye B. of Kaye B. Designing"/>
         </div>
-        <hr className="lineThin" />
       </div>
     )
   }

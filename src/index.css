@@ -1,7 +1,10 @@
 body {
-  margin: 2rem;
+  margin: 1rem;
   /* margin: 0; */
   /* background-color: #378846; */
    background-color: #02425D;
    /* background-color: white; */
+   /* min-width: 100vw;
+   max-width: 100vw; */
+   /* width: 98%; */
 }

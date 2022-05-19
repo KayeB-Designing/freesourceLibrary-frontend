@@ -56,9 +56,9 @@ function Goals(props) {
         <img src={item.qr} />
         <p className="descr">
           <ul className="descrList">
-            <li className="descrListItem">{item.type}</li>
-            <li className="descrListItem">{item.description}</li>
-            <li className="descrListItem">{item.email}</li>
+            <li className="descrListItem"><span className="descrSpan">{item.description}</span></li>
+            <li className="descrListItem"><span className="itemSpan">Resource Type: </span>{item.type}</li>
+            <li className="descrListItem"><span className="itemSpan">Email Required: </span>{item.email}</li>
           </ul>
         </p>
         <hr className="lineThin" />
