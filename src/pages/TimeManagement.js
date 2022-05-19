@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-function TimeManagement(props) {s
+function TimeManagement(props) {
   const [timeManagement, setTimeManagement] = useState(null);
   const [click, setClick] = useState(false)
 
