@@ -1,15 +1,6 @@
 import { Link } from "react-router-dom";
-// import Message from '../components/Message';
 
 function Header(props) {
-  // const navStyle = {
-  //   display: "flex",
-  //   justifyContent: "space-around",
-  //   border: "3px solid black",
-  //   padding: "8px",
-  //   width: "90%",
-  //   margin: "auto",
-  // };
     return (
       <header className="header headerGrid">
         <img  className="headerImg" src="https://i.postimg.cc/bJVZvSn0/Logo-1.png" alt="Freesource Library Logo"/>
@@ -26,7 +17,7 @@ function Header(props) {
           </nav>
         </div>
     </header>
-    );
+  );
 }
   
   export default Header;

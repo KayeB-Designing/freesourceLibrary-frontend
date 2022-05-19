@@ -7,15 +7,12 @@ function Habits(props) {
   const getHabitsData = async () => {
     const response = await fetch(`${props.URL}/habits`);
     const data = await response.json();
-    // set the projects state to the data
     setHabits(data);
   };
 
-  // make an initial call for the data inside a useEffect, so it only happens once on component load
   useEffect(() => {getHabitsData()}, []);
   useEffect(() => setClick())
 
-  // define a function that will return the JSX needed once we get the data
   const loaded = () => {
     return habits.map((item) => (
       <div className="result">
@@ -37,7 +34,6 @@ function Habits(props) {
 
   function buttonClicked() {
     console.log(`clicked`)
-    // created()
     return click
   }
 
@@ -53,15 +49,6 @@ function Habits(props) {
       </div>
     )
   }
-
-  // return habits ? loaded() : <h1>Loading...</h1>;
-
-  // return (
-  //   <>
-  //     <h1>Habit Building</h1>
-  //     <button>Download & Print PDF</button>
-  //   </>
-  // )
 }
 
 export default Habits;

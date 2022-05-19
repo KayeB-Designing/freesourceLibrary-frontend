@@ -1,25 +1,18 @@
 import { useState, useEffect } from "react";
 
-function TimeManagement(props) {
-  // create state to hold projects
+function TimeManagement(props) {s
   const [timeManagement, setTimeManagement] = useState(null);
   const [click, setClick] = useState(false)
 
-  //create function to make api call
   const getTimeManagementData = async () => {
-    //make api call and get response
     const response = await fetch(`${props.URL}/timeManagement`);
-    // turn response into javascript object
     const data = await response.json();
-    // set the projects state to the data
     setTimeManagement(data);
   };
 
-  // make an initial call for the data inside a useEffect, so it only happens once on component load
   useEffect(() => {getTimeManagementData()}, []);
   useEffect(() => setClick())
 
-  // define a function that will return the JSX needed once we get the data
   const loaded = () => {
     return timeManagement.map((item) => (
       <div className="result">
@@ -27,7 +20,6 @@ function TimeManagement(props) {
           <h2 className="itemTitle">{item.name}</h2>
           </a>
           <img src={item.qr} />
-          
           <p className="descr">
             <ul className="descrList">
               <li className="descrListItem"><span className="descrSpan">{item.description}</span></li>
@@ -42,7 +34,6 @@ function TimeManagement(props) {
 
   function buttonClicked() {
     console.log(`clicked`)
-    // created()
     return click
   }
 
@@ -58,15 +49,6 @@ function TimeManagement(props) {
       </div>
     )
   }
-
-  // return timeManagement ? loaded() : <h1>Loading...</h1>;
-
-  // return (
-  //   <>
-  //     <h1>Time Management</h1>
-  //     <button>Download & Print PDF</button>
-  //   </>
-  // )
 }
 
 export default TimeManagement;

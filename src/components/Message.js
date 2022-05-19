@@ -22,14 +22,10 @@ export default function Message() {
   function getMessageData(){
     fetch('https://quotes15.p.rapidapi.com/quotes/random/', options)
     .then(response => response.json())
-    // .then(response => console.log(response))
     .then(data => setMessage(data))
-    // .then(data => console.log(`This is data: ${data}`))
     .catch(err => console.error(err))
   };
 
-
-  // console.log(`This is message: ${message}`)
   function buttonClicked() {
     console.log(`clicked`)
     return click
@@ -43,7 +39,6 @@ export default function Message() {
           <hr className="lineThick" />
           <h2 className="quoteTitle" >Quote of the day:</h2>
           <p className="quote" >{message.content}</p>
-          {/* <hr className="lineThin" /> */}
             <a className="quotePDF" target="_blank" href="https://v1.nocodeapi.com/kayebedesigning/pdf/WKgezVWsvcSbNnwO/url2pdf?url=https://freesourcelibrary.netlify.app/home/&inline=Download&document_size=Letter&orientation=portrait" download><button onClick={buttonClicked}>Get an extra quote!</button></a>
             <hr className="lineThick" />
         </div>
