@@ -39,10 +39,10 @@ export default function Message() {
     <h2>Loading a quote for you!</h2>
     }else{
       return (
-        <div>
-          <h2>Quote of the day:</h2>
-            {message.content}
-            <a target="_blank" href="https://v1.nocodeapi.com/kayebedesigning/pdf/WKgezVWsvcSbNnwO/url2pdf?url=https://freesourcelibrary.netlify.app/home/&inline=Download&document_size=Letter&orientation=portrait" download><button onClick={buttonClicked}>Get an extra quote!</button></a>
+        <div className="quoteBlock" >
+          <h2 className="quoteTitle" >Quote of the day:</h2>
+          <p className="quote" >{message.content}</p>
+            <a className="quotePDF" target="_blank" href="https://v1.nocodeapi.com/kayebedesigning/pdf/WKgezVWsvcSbNnwO/url2pdf?url=https://freesourcelibrary.netlify.app/home/&inline=Download&document_size=Letter&orientation=portrait" download><button onClick={buttonClicked}>Get an extra quote!</button></a>
         </div>
       )
   }

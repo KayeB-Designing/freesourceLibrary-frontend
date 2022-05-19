@@ -52,11 +52,13 @@ function Goals(props) {
       <div>
         <a href={item.Link}>
             <img src={item.qr} />
-            <h2>{item.name}</h2>
-            <p>
-                {item.type}
-                {item.description}
-                {item.email}
+            <h2 className="itemTitle">{item.name}</h2>
+            <p className="descr">
+              <ul className="descrList">
+                <li className="descrListItem">{item.type}</li>
+                <li className="descrListItem">{item.description}</li>
+                <li className="descrListItem">{item.email}</li>
+              </ul>
             </p>
         </a>
       </div>
@@ -75,11 +77,11 @@ function Goals(props) {
     return <h2>Loading Goal Setting Resources, Thank You for Your Patience!!!</h2>
   }else{
     return (
-      <>
-        <h1>Goal Setting Resources</h1>
+      <div className="contentContainer" >
+        <h1 className="pageTitle">Goal Setting Resources</h1>
         {loaded()}
         <a target="_blank" href="https://v1.nocodeapi.com/kayebedesigning/pdf/WKgezVWsvcSbNnwO/url2pdf?url=https://freesource-library.herokuapp.com/goals/&inline=Download&document_size=Letter&orientation=portrait" download><button onClick={buttonClicked}>Download List as JSON</button></a>
-    </>
+    </div>
     )
   }
 };

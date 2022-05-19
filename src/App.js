@@ -10,17 +10,13 @@ import Goals from "./pages/Goals";
 import Habits from "./pages/Habits";
 import TimeManagement from "./pages/TimeManagement";
 import Message from './components/Message';
-// import GoalsPDF from './pages/GoalsPDF';
-// import HabitsPDF from './pages/HabitsPDF';
-// import TimeManagementPDF from './pages/TimeManagementPDF';
+
 
 
 
 function App() {
 
   const URL = "https://freesource-library.herokuapp.com";
-  // const apiURL = "https://v1.nocodeapi.com/kayebedesigning/pdf/WKgezVWsvcSbNnwO/url2pdf?url=";
-  // const URL = "http://localhost:4000";
 
   return (
     <div className="App">

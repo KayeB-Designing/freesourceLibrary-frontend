@@ -2,3 +2,86 @@
   text-align: center;
   background-color: blueviolet;
 }
+
+.header {
+  background-color: brown;
+}
+
+.headerName {
+  color: burlywood;
+}
+
+.nameSpan {
+  color: rgb(49, 233, 79);
+}
+
+.headerSlogan {
+  color: cornflowerblue;
+}
+
+.nav {
+  background-color: chartreuse;
+}
+
+.navLink {
+  color: darkorange;
+}
+
+.contentContainer {
+  background-color: hotpink;
+}
+
+.itemTitle {
+  background-color: coral;
+}
+
+.descr {
+  background-color: rgb(53, 253, 120);
+}
+
+.descrList {
+  background-color: rgb(253, 100, 53);
+}
+
+.descrListItem {
+  background-color: rgb(253, 53, 53);
+}
+
+.aboutImg {
+  background-color: rgb(53, 90, 253);
+  padding: 1rem;
+}
+
+.pageTitle {
+  background-color: greenyellow;
+}
+
+.quoteBlock {
+  background-color: darkmagenta;
+}
+
+.quoteTitle {
+  background-color: darkgreen;
+}
+
+.quote {
+  background-color: darkslategrey;
+}
+
+.quotePDF {
+  background-color: gold;
+  padding: 1rem;
+}
+
+.footer {
+  background-color: chocolate;
+}
+
+.qr{
+  background-color: crimson;
+  padding: 1rem;
+}
+
+.footerMsg {
+  background-color: fuchsia;
+}
