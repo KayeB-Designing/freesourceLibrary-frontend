@@ -18,18 +18,19 @@ function Habits(props) {
   // define a function that will return the JSX needed once we get the data
   const loaded = () => {
     return habits.map((item) => (
-      <div>
-        <a target="_blank" href={item.Link}>
-            <img src={item.qr} />
-            <h2 className="itemTitle">{item.name}</h2>
-            <p className="descr">
-              <ul className="descrList">
-                <li className="descrListItem">{item.type}</li>
-                <li className="descrListItem">{item.description}</li>
-                <li className="descrListItem">{item.email}</li>
-              </ul>
-            </p>
+      <div className="result">
+        <a  className="resourceLink" target="_blank" href={item.Link}>
+          <h2 className="itemTitle">{item.name}</h2>
         </a>
+        <img src={item.qr} />
+        <p className="descr">
+          <ul className="descrList">
+            <li className="descrListItem">{item.type}</li>
+            <li className="descrListItem">{item.description}</li>
+            <li className="descrListItem">{item.email}</li>
+          </ul>
+        </p>
+        <hr className="lineThin" />
       </div>
     ));
   };
@@ -46,6 +47,7 @@ function Habits(props) {
     return (
       <div  className="contentContainer" >
         <h1 className="pageTitle">Habit Building Resources</h1>
+        <hr className="lineThick" />
         {loaded()}
         <a target="_blank" href="https://v1.nocodeapi.com/kayebedesigning/pdf/WKgezVWsvcSbNnwO/url2pdf?url=https://freesource-library.herokuapp.com/habits/&inline=Download&document_size=Letter&orientation=portrait" download><button onClick={buttonClicked}>Download List as JSON</button></a>
       </div>

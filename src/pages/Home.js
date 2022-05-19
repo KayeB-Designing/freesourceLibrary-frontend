@@ -11,6 +11,7 @@ function Home(props) {
   return (
     <div className="contentContainer" >
       <h1 className="pageTitle">Categories</h1>
+      <hr className="lineThick" />
       {/* <div>
         <Link to={category.path}>
         <h2>{category.name}</h2>
@@ -19,24 +20,32 @@ function Home(props) {
         </p>
         </Link>
       </div> */}
-      <Link to="../goals">
-      <h2 className="itemTitle">Goal Setting</h2>
-      <p className="descr">
-        The process of deciding what you want to achieve or what you want someone else to achieve over a particular period.
-      </p>
-      </Link>
-      <Link to="../habits">
-      <h2 className="itemTitle">Habit Building</h2>
-      <p className="descr">
-        An act, behavioral response, practice, or custom established in one's repertoire by frequent repetition of the same activity.
-      </p>
-      </Link>
-      <Link to="../timeManagement">
-      <h2 className="itemTitle">Time Management</h2>
-      <p className="descr">
-        The ability to use one's time effectively or productively.
-      </p>
-      </Link>
+      <div className="result">
+        <Link to="../goals">
+          <h2 className="itemTitle">Goal Setting</h2>
+        </Link>
+          <p className="descr">
+            The process of deciding what you want to achieve or what you want someone else to achieve over a particular period.
+          </p>
+      </div>
+      <hr className="lineThin" />
+      <div className="result">
+        <Link to="../habits">
+          <h2 className="itemTitle">Habit Building</h2>
+        </Link>
+          <p className="descr">
+            An act, behavioral response, practice, or custom established in one's repertoire by frequent repetition of the same activity.
+          </p>
+      </div>
+      <hr className="lineThin" />
+      <div className="result">
+        <Link to="../timeManagement">
+          <h2 className="itemTitle">Time Management</h2>
+        </Link>
+          <p className="descr">
+            The ability to use one's time effectively or productively.
+          </p>
+      </div>
     </div>
   )
 }
