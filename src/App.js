@@ -2,7 +2,6 @@ import './App.css';
 
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-// import Main from './components/Main';
 import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -10,17 +9,12 @@ import Goals from "./pages/Goals";
 import Habits from "./pages/Habits";
 import TimeManagement from "./pages/TimeManagement";
 import Message from './components/Message';
-// import GoalsPDF from './pages/GoalsPDF';
-// import HabitsPDF from './pages/HabitsPDF';
-// import TimeManagementPDF from './pages/TimeManagementPDF';
 
 
 
 function App() {
 
   const URL = "https://freesource-library.herokuapp.com";
-  // const apiURL = "https://v1.nocodeapi.com/kayebedesigning/pdf/WKgezVWsvcSbNnwO/url2pdf?url=";
-  // const URL = "http://localhost:4000";
 
   return (
     <div className="App">
