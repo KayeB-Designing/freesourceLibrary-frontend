@@ -9,13 +9,13 @@
 	Freesource Library, free resources for life.
 
 	* Mission: 
-	To culminate the highest quality free resources found online, in an organized and easy to use manner.
+	To accumulate and culminate the highest quality free resources found online, in an organized and easy to use manner.
  
 	* Vision: 
 	Freesource Library is dedicated to providing access to the knowledge and tools needed to learn how to live.
 	
 	* Why is our mission and vision important?
-	This site is meant to help others by providing access to the culmionated knowledge and tools they need to learn how to live the life they want to live.
+	This site is meant to help others by providing access to the accumulated knowledge and tools they need to learn how to live the life they want to live.
 
 ##  User Stories & Wireframes
 
